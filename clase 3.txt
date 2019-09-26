@@ -1,0 +1,30 @@
+git add -A
+git status
+git commit -m "
+git push
+git "merch" mezclar un codigo con otro
+
+Toda clase debe tener un autor
+
+/**
+*
+*@author Dennis Parra
+*/
+
+abstraccion (buscar algo que me sirva solo a mi)
+
+Clases = mayuscula CamelCase
+objetos= minuscula camelCase
+
+Agrupar objetos = Clasificacion
+
+1)NO USAR PLURAL PARA LOS NOMBRES DE CLASES
+2)NO USAR PLURAL PARA VARIABLES
+
+En una clase los atributos van con tipos
+name:string
+age:int
+
+CLASE = UML
+Metodos = +(abierto), -(cerrado), #(
+Encapsulamiento (guardar lo mio y no dejar ver a los demas) 
