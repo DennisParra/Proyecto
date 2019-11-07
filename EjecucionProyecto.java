@@ -1,3 +1,0 @@
-//Debemos comenzar a desarrollar el código aquí muchachos, debemos presentar el codigo para el fin de la unidad
-//Trabajemos toda la semana en esto, pilas aunque sea un pedazo de código dos veces al dia. 
-//Comencemos...
