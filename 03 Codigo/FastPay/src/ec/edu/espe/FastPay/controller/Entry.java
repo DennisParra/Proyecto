@@ -13,37 +13,18 @@ import java.util.Scanner;
  * @author Usuario
  */
 public class Entry {
+    
+    Scanner enter = new Scanner (System.in);
+    
     private int id_article;
     private String data;
-    //private Bill : bill;
-    private float price;
-    private final int option;
-    Scanner enter = new Scanner(System.in);
-//    Scanner read = new Scanner(System.in);
-//    {
-//    System.out.println("****Menu de opciones****");   
-//    System.out.println("1.-Enter");
-//    System.out.println("2.-Modify");
-//    System.out.println("3.-Delete");
-//    System.out.println("4.-See");
-//    
-//    option = read.nextInt();
-//    switch(option)
-//    {
-//        case 1:
-//            System.out.println("Enter the dates for the article: ");
-//            this.id_article = Integer.parseInt(read.nextLine());
-//            
-//            
-//    }
-//    
-//    }
-//    
     
-    public static void enter(){
-        Scanner sc = new Scanner(System.in);
+    
+    
+    public void enter(){
+        
         System.out.println("Enter the ID of article: ");
-        this.id_article = Integer.parseInt(enter.nextLine());
+        id_article = enter.nextInt();
         
     } 
     public static void modify(){
