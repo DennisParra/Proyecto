@@ -22,9 +22,10 @@ public class FastPay {
         Entry entry = new Entry();
         
         Scanner enter = new Scanner(System.in);
-        //boolean exit = false;;
+      
         int option;
-        
+        char respuesta;
+       
         do{
             System.out.println("1. Enter");
             System.out.println("2. Modify");
@@ -51,10 +52,7 @@ public class FastPay {
                 default:
                     JOptionPane.showMessageDialog(null,"Invalid option\n\n");
             }
-            
         }while(option != 5);
-        
-        
-    }
-    
+ 
+    }        
 }
