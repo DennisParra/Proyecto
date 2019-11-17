@@ -22,7 +22,7 @@ public class Entry {
     
     private int id_article;
     private String data;
-    char respuesta;
+    char reply;
     
     public void enter(){
         
@@ -31,11 +31,11 @@ public class Entry {
         do{
             System.out.print("Enter the ID of article: ");
             id_article = enter.nextInt();
-            System.out.print("Desea introducir otro articulo(s/n): ");
-            respuesta = enter.next().charAt(0);
+            System.out.print("You want to enter another article? (y/n): ");
+            reply = enter.next().charAt(0);
             System.out.println("");
             
-        }while(respuesta == 's' || respuesta == 'S');
+        }while(reply == 'y' || reply == 'Y');
         
         entry.add(ent);
         
