@@ -5,7 +5,7 @@
  */
 package ec.edu.espe.FastPay.controller;
 
-import static ec.edu.espe.FastPay.controller.Provider.enter;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -39,7 +39,17 @@ public class Entry {
         
         entry.add(ent);
         
+        try{
+            PrintWriter pw = new PrintWriter("Archivo.txt");
+            pw.write("nose");
+            pw.close();
+        }catch(Exception ex){
+            ex.printStackTrace();
+        }
+        
     } 
+    
+    
     public static void modify(){
         
     }
