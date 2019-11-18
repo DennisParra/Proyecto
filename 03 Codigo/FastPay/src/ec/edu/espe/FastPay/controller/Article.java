@@ -47,7 +47,7 @@ public class Article {
             show.println("ID the Article: " + id_article );
             show.println("Name: " + name );
             show.println("ID provider: " + id_provider );
-            show.println("Stock: " + show);
+            show.println("Stock: " + stock);
 
                 show.println("");
             }
@@ -56,7 +56,36 @@ public class Article {
         }
                
     }
-    
+    else{
+        try {
+            System.out.println("Enter the id the article: ");
+            id_article = enter.nextInt();
+            System.out.println("Type the name: ");
+            name = enter.next();
+            System.out.println("Enter the Id the provider: ");
+            id_provider = enter.nextInt();
+            System.out.println("Enter the Stock: ");
+            stock = enter.nextInt();
+            System.out.println(" "); 
+   
+           
+                
+            PrintWriter show;
+            try (FileWriter escribir = new FileWriter(Article, true)) {
+                show = new PrintWriter(escribir);
+            show.println("ID the Article: " + id_article );
+            show.println("Name: " + name );
+            show.println("ID provider: " + id_provider );
+            show.println("Stock: " + stock);
+
+
+               
+                show.println("");
+            }
+            show.close();
+        } catch (IOException ex) {
+        }
+    }
     
     
 
