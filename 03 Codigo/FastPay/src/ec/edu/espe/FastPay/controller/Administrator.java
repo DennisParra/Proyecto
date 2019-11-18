@@ -75,7 +75,7 @@ public class Administrator {
     }
     else{
         try {
-                //arch.createNewFile();
+              
             System.out.println("Enter el dni for create el user: ");
             dni = enter.nextInt();
             System.out.println("Type the name: ");
