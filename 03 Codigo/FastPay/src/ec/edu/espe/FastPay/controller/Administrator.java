@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package ec.edu.espe.FastPay.controller;
 
 import java.io.File;
@@ -11,10 +6,6 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-/**
- *
- * @author Usuario
- */
 public class Administrator {
     private int dni;
     private String name;
@@ -43,7 +34,7 @@ public class Administrator {
         switch(opcion)
         {
             case 1:
-                System.out.println("Ingrese los datos");
+                System.out.println("Please, input the data");
     if(!User.exists()){
         try {
             System.out.println("Enter el dni for create el user: ");
@@ -76,15 +67,15 @@ public class Administrator {
     else{
         try {
               
-            System.out.println("Enter el dni for create el user: ");
+            System.out.println("Enter your dni to create a user: ");
             dni = enter.nextInt();
             System.out.println("Type the name: ");
             name = enter.nextLine();
             System.out.println("Type the Lastname: ");
             Last_Name = enter.nextLine();
-            System.out.println("Enter un user for create the user: ");
+            System.out.println("Enter username to create your user: ");
             user = enter.toString();
-            System.out.println("Enter a passworrd: ");
+            System.out.println("Enter a password: ");
             password = enter.nextLine();
             
            

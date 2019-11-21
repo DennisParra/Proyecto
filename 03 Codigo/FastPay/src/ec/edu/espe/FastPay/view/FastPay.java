@@ -1,23 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package ec.edu.espe.FastPay.view;
 
 import ec.edu.espe.FastPay.controller.Entry;
 import java.util.Scanner;
-import javax.swing.JOptionPane;
 
-/**
- *
- * @author Usuario
- */
 public class FastPay {
-
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
         
         Menu();
@@ -35,11 +21,12 @@ public class FastPay {
             do{
                 System.out.println("1. Enter");
                 System.out.println("2. Modify");
-                System.out.println("3. Delite");
+                System.out.println("3. Delete");
                 System.out.println("4. See");
                 System.out.println("5. Exit");
 
-                option = Integer.parseInt(JOptionPane.showInputDialog("Type an option: "));
+                System.out.println("Please input an option: ");
+                option = enter.nextInt();
                 switch(option){
                     case 1:
                         entry.enter();
@@ -48,17 +35,20 @@ public class FastPay {
                         //modify
                         break;
                     case 3:
-                        //Delite
+                        //Delete
                         break;
                     case 4:
                         //see
                         break;
                     case 5: 
+                        System.out.println("Thanks for use our system\n");
+                        System.out.println("Bye :)");
                         break;
                     default:
-                        JOptionPane.showMessageDialog(null,"Invalid option\n\n");
+                        System.out.println("Invalid option, input again");
+                        break;
                 }
-            }while(option != 5);
- 
-    }        
-}
+            }while(option !=5);
+        }
+    }
+

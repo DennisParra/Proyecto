@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package ec.edu.espe.FastPay.controller;
 
 import java.io.File;
@@ -11,10 +6,6 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-/**
- *
- * @author Usuario
- */
 public class Article {
     private int id_article;
     private String name;
@@ -32,11 +23,11 @@ public class Article {
     if(!Article.exists()){
         try {
             Article.createNewFile();
-            System.out.println("Enter the id the article: ");
+            System.out.println("Enter article ID: ");
             id_article = enter.nextInt();
             System.out.println("Type the name: ");
             name = enter.next();
-            System.out.println("Enter the Id the provider: ");
+            System.out.println("Enter the provider ID: ");
             id_provider = enter.nextInt();
             System.out.println("Enter the Stock: ");
             stock = enter.nextInt();

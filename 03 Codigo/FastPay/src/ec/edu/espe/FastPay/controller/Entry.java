@@ -9,11 +9,6 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-
-/**
- *
- * @author Usuario
- */
 public class Entry {
     
     ArrayList<Entry> entry = new ArrayList<Entry>();
@@ -29,9 +24,9 @@ public class Entry {
         Entry ent = new Entry();
         
         do{
-            System.out.print("Enter the ID of article: ");
+            System.out.print("Enter article ID: ");
             id_article = enter.nextInt();
-            System.out.print("You want to enter another article? (y/n): ");
+            System.out.print("Do you want to enter another article? (Yes/No): ");
             reply = enter.next().charAt(0);
             System.out.println("");
             
