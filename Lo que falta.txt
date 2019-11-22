@@ -1,0 +1,4 @@
+- Debemos añadir por lo menos 2 usuarios
+- Crear todas las posibles pantallas (No con cajas de texto) para el Lunes
+en hojas (Widgets - Swing de Java)
+- Fondo blanco, texto negro, otro tipo de texto azul.
