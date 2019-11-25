@@ -1,4 +1,0 @@
-- Cambiar el titulo de la carpeta de proyecto, no se debe llamar "Proyecto"
-- En el diagrama de casos de uso poner una delimitacion
-- Casos de uso son acciones
-- 
