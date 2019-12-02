@@ -497,8 +497,10 @@
     <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
     <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,1,-65,0,0,2,-98"/>
   </AuxValues>
 
+<<<<<<< HEAD:03 Codigo/FastPay/build/classes/Tent.form
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
@@ -559,33 +561,63 @@
           </Group>
       </Group>
     </DimensionLayout>
+=======
+  <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+    <Property name="useNullLayout" type="boolean" value="false"/>
+>>>>>>> 4853fdfac61f90bafaa93a2cfa8969f4e7e207c6:03 Codigo/FastPay/build/classes/ec/edu/espe/interfaz/Tent.form
   </Layout>
   <SubComponents>
     <Component class="javax.swing.JLabel" name="txtTitle">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Microsoft YaHei UI" size="18" style="0"/>
+          <Font name="Times New Roman" size="36" style="0"/>
         </Property>
         <Property name="text" type="java.lang.String" value="&#xa1;Hola! Bienvenido a tu tienda virtual."/>
         <Property name="toolTipText" type="java.lang.String" value="txtTitle"/>
       </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="90" y="40" width="-1" height="29"/>
+        </Constraint>
+      </Constraints>
     </Component>
     <Component class="javax.swing.JLabel" name="txtFirstComment">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Times New Roman" size="18" style="2"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Inicia sesi&#xf3;n para disfrutar de los benedicios de FastPay"/>
         <Property name="toolTipText" type="java.lang.String" value="txtComment"/>
       </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="130" y="90" width="-1" height="-1"/>
+        </Constraint>
+      </Constraints>
     </Component>
     <Component class="javax.swing.JLabel" name="txtUser">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Times New Roman" size="18" style="3"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Usuario:"/>
         <Property name="toolTipText" type="java.lang.String" value="txtUser"/>
       </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="60" y="130" width="-1" height="-1"/>
+        </Constraint>
+      </Constraints>
     </Component>
     <Container class="javax.swing.JScrollPane" name="jScrollPane1">
       <AuxValues>
         <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
       </AuxValues>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="60" y="160" width="268" height="33"/>
+        </Constraint>
+      </Constraints>
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
@@ -598,41 +630,101 @@
     </Container>
     <Component class="javax.swing.JLabel" name="txtPassword">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Times New Roman" size="18" style="3"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Contrase&#xf1;a:"/>
         <Property name="toolTipText" type="java.lang.String" value="pwdPassword"/>
       </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="60" y="210" width="-1" height="30"/>
+        </Constraint>
+      </Constraints>
     </Component>
     <Component class="javax.swing.JPasswordField" name="pwdPasswordUser">
       <Properties>
         <Property name="toolTipText" type="java.lang.String" value="pwdPasswordUser"/>
       </Properties>
+<<<<<<< HEAD:03 Codigo/FastPay/build/classes/Tent.form
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="pwdPasswordUserActionPerformed"/>
       </Events>
+=======
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="60" y="250" width="268" height="33"/>
+        </Constraint>
+      </Constraints>
+>>>>>>> 4853fdfac61f90bafaa93a2cfa8969f4e7e207c6:03 Codigo/FastPay/build/classes/ec/edu/espe/interfaz/Tent.form
     </Component>
     <Component class="javax.swing.JButton" name="btnAccept">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Times New Roman" size="16" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Aceptar"/>
         <Property name="toolTipText" type="java.lang.String" value="btnAccept"/>
       </Properties>
       <Events>
+<<<<<<< HEAD:03 Codigo/FastPay/build/classes/Tent.form
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAcceptActionPerformed"/>
       </Events>
+=======
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+      </Events>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="250" y="300" width="-1" height="30"/>
+        </Constraint>
+      </Constraints>
+>>>>>>> 4853fdfac61f90bafaa93a2cfa8969f4e7e207c6:03 Codigo/FastPay/build/classes/ec/edu/espe/interfaz/Tent.form
     </Component>
     <Component class="javax.swing.JLabel" name="txtComment">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Times New Roman" size="16" style="2"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="&#xbf;A&#xfa;n no te has registrado? &#xa1;Clickea este bot&#xf3;n y se parte de FastPay!"/>
         <Property name="toolTipText" type="java.lang.String" value="txtComment"/>
       </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="30" y="350" width="-1" height="-1"/>
+        </Constraint>
+      </Constraints>
     </Component>
     <Component class="javax.swing.JButton" name="btnRegister">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Times New Roman" size="14" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Registrarme"/>
         <Property name="toolTipText" type="java.lang.String" value="btnRegister"/>
       </Properties>
+<<<<<<< HEAD:03 Codigo/FastPay/build/classes/Tent.form
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRegisterActionPerformed"/>
       </Events>
+=======
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="490" y="350" width="-1" height="-1"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel17">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/ec/edu/espe/interfaz/carrito-de-compras2.jpg"/>
+        </Property>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="10" y="10" width="650" height="380"/>
+        </Constraint>
+      </Constraints>
+>>>>>>> 4853fdfac61f90bafaa93a2cfa8969f4e7e207c6:03 Codigo/FastPay/build/classes/ec/edu/espe/interfaz/Tent.form
     </Component>
   </SubComponents>
 </Form>

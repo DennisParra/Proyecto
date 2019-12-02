@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
+package ec.edu.espe.interfaz;
 /**
  *
  * @author HP
@@ -35,21 +35,21 @@ public class Tent extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         jTextField3 = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
-        jComboBox2 = new javax.swing.JComboBox<>();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jComboBox3 = new javax.swing.JComboBox<>();
+        jComboBox2 = new javax.swing.JComboBox<String>();
+        jComboBox1 = new javax.swing.JComboBox<String>();
+        jComboBox3 = new javax.swing.JComboBox<String>();
         jLabel11 = new javax.swing.JLabel();
         jRadioButton1 = new javax.swing.JRadioButton();
         jRadioButton2 = new javax.swing.JRadioButton();
         jRadioButton3 = new javax.swing.JRadioButton();
         jLabel12 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList<>();
+        jList1 = new javax.swing.JList<String>();
         jLabel13 = new javax.swing.JLabel();
         jTextField4 = new javax.swing.JTextField();
         jLabel14 = new javax.swing.JLabel();
-        jComboBox4 = new javax.swing.JComboBox<>();
-        jComboBox5 = new javax.swing.JComboBox<>();
+        jComboBox4 = new javax.swing.JComboBox<String>();
+        jComboBox5 = new javax.swing.JComboBox<String>();
         jLabel15 = new javax.swing.JLabel();
         jTextField5 = new javax.swing.JTextField();
         jButton3 = new javax.swing.JButton();
@@ -57,12 +57,22 @@ public class Tent extends javax.swing.JFrame {
         txtFirstComment = new javax.swing.JLabel();
         txtUser = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
+<<<<<<< HEAD:03 Codigo/FastPay/src/Tent.java
         txtNameUser = new javax.swing.JTextPane();
         txtPassword = new javax.swing.JLabel();
         pwdPasswordUser = new javax.swing.JPasswordField();
         btnAccept = new javax.swing.JButton();
         txtComment = new javax.swing.JLabel();
         btnRegister = new javax.swing.JButton();
+=======
+        jTextPane1 = new javax.swing.JTextPane();
+        jLabel4 = new javax.swing.JLabel();
+        jPasswordField1 = new javax.swing.JPasswordField();
+        jButton1 = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
+        jLabel17 = new javax.swing.JLabel();
+>>>>>>> 4853fdfac61f90bafaa93a2cfa8969f4e7e207c6:03 Codigo/FastPay/src/ec/edu/espe/interfaz/Tent.java
 
         jLabel6.setFont(new java.awt.Font("Book Antiqua", 0, 24)); // NOI18N
         jLabel6.setText("¡Regístrate! Es gratis, rápido y fácil");
@@ -100,7 +110,7 @@ public class Tent extends javax.swing.JFrame {
         jLabel10.setText("Fecha de nacimiento:");
         jLabel10.setToolTipText("txtBirthDateRegister");
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Mes", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12" }));
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Mes", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12" }));
         jComboBox2.setToolTipText("cmbMonths");
         jComboBox2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -108,7 +118,7 @@ public class Tent extends javax.swing.JFrame {
             }
         });
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Día", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Día", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" }));
         jComboBox1.setToolTipText("cmbDays");
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -116,7 +126,7 @@ public class Tent extends javax.swing.JFrame {
             }
         });
 
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Año", "1980", "1981", "1982", "1983", "1984", "1985", "1986", "1987", "1988", "1989", "1990", "1991", "1992", "1993", "1994", "1995", "1996", "1997", "1998", "1999", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019" }));
+        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Año", "1980", "1981", "1982", "1983", "1984", "1985", "1986", "1987", "1988", "1989", "1990", "1991", "1992", "1993", "1994", "1995", "1996", "1997", "1998", "1999", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019" }));
         jComboBox3.setToolTipText("cmbYears");
 
         jLabel11.setText("Género:");
@@ -134,10 +144,10 @@ public class Tent extends javax.swing.JFrame {
         jLabel12.setText("Tarjeta de crédito o débito:");
         jLabel12.setToolTipText("txtBank");
 
-        jList1.setModel(new javax.swing.AbstractListModel<String>() {
+        jList1.setModel(new javax.swing.AbstractListModel() {
             String[] strings = { "VISA", "MasterCard", "American Express", "Diners Club", " " };
             public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
+            public Object getElementAt(int i) { return strings[i]; }
         });
         jList1.setToolTipText("lstBanks");
         jScrollPane2.setViewportView(jList1);
@@ -154,6 +164,7 @@ public class Tent extends javax.swing.JFrame {
 
         jLabel14.setText("Fecha de vencimiento:");
 
+<<<<<<< HEAD:03 Codigo/FastPay/src/Tent.java
         jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Mes", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12" }));
         jComboBox4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -167,6 +178,11 @@ public class Tent extends javax.swing.JFrame {
                 jComboBox5ActionPerformed(evt);
             }
         });
+=======
+        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Mes", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12" }));
+
+        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Año", "2019", "2020", "2021", "2022", "2023", "2024", "2025", "2026", "2027", "2028", "2029", "2030", "2031", "2032", "2033", "2034", "2035", "2036", "2037", "2038" }));
+>>>>>>> 4853fdfac61f90bafaa93a2cfa8969f4e7e207c6:03 Codigo/FastPay/src/ec/edu/espe/interfaz/Tent.java
 
         jLabel15.setText("Código de seguridad:");
 
@@ -296,7 +312,9 @@ public class Tent extends javax.swing.JFrame {
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+<<<<<<< HEAD:03 Codigo/FastPay/src/Tent.java
         txtTitle.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 18)); // NOI18N
         txtTitle.setText("¡Hola! Bienvenido a tu tienda virtual.");
         txtTitle.setToolTipText("txtTitle");
@@ -306,10 +324,27 @@ public class Tent extends javax.swing.JFrame {
 
         txtUser.setText("Usuario:");
         txtUser.setToolTipText("txtUser");
+=======
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
+        jLabel1.setText("¡Hola! Bienvenido a tu tienda virtual.");
+        jLabel1.setToolTipText("txtTitle");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 40, -1, 29));
+
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 2, 18)); // NOI18N
+        jLabel2.setText("Inicia sesión para disfrutar de los benedicios de FastPay");
+        jLabel2.setToolTipText("txtComment");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 90, -1, -1));
+
+        jLabel3.setFont(new java.awt.Font("Times New Roman", 3, 18)); // NOI18N
+        jLabel3.setText("Usuario:");
+        jLabel3.setToolTipText("txtUser");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 130, -1, -1));
+>>>>>>> 4853fdfac61f90bafaa93a2cfa8969f4e7e207c6:03 Codigo/FastPay/src/ec/edu/espe/interfaz/Tent.java
 
         txtNameUser.setToolTipText("txtNameUser");
         jScrollPane1.setViewportView(txtNameUser);
 
+<<<<<<< HEAD:03 Codigo/FastPay/src/Tent.java
         txtPassword.setText("Contraseña:");
         txtPassword.setToolTipText("pwdPassword");
 
@@ -389,10 +424,46 @@ public class Tent extends javax.swing.JFrame {
                     .addComponent(btnRegister))
                 .addGap(28, 28, 28))
         );
+=======
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, 268, 33));
+
+        jLabel4.setFont(new java.awt.Font("Times New Roman", 3, 18)); // NOI18N
+        jLabel4.setText("Contraseña:");
+        jLabel4.setToolTipText("pwdPassword");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 210, -1, 30));
+
+        jPasswordField1.setText("Contraseña:");
+        jPasswordField1.setToolTipText("pwdPasswordUser");
+        getContentPane().add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 250, 268, 33));
+
+        jButton1.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
+        jButton1.setText("Aceptar");
+        jButton1.setToolTipText("btnAccept");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 300, -1, 30));
+
+        jLabel5.setFont(new java.awt.Font("Times New Roman", 2, 16)); // NOI18N
+        jLabel5.setText("¿Aún no te has registrado? ¡Clickea este botón y se parte de FastPay!");
+        jLabel5.setToolTipText("txtComment");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 350, -1, -1));
+
+        jButton2.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        jButton2.setText("Registrarme");
+        jButton2.setToolTipText("btnRegister");
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 350, -1, -1));
+
+        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ec/edu/espe/interfaz/carrito-de-compras2.jpg"))); // NOI18N
+        getContentPane().add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 650, 380));
+>>>>>>> 4853fdfac61f90bafaa93a2cfa8969f4e7e207c6:03 Codigo/FastPay/src/ec/edu/espe/interfaz/Tent.java
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+<<<<<<< HEAD:03 Codigo/FastPay/src/Tent.java
     private void pwdPasswordUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pwdPasswordUserActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_pwdPasswordUserActionPerformed
@@ -444,6 +515,11 @@ public class Tent extends javax.swing.JFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
+=======
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+>>>>>>> 4853fdfac61f90bafaa93a2cfa8969f4e7e207c6:03 Codigo/FastPay/src/ec/edu/espe/interfaz/Tent.java
 
     /**
      * @param args the command line arguments
@@ -495,6 +571,14 @@ public class Tent extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
+<<<<<<< HEAD:03 Codigo/FastPay/src/Tent.java
+=======
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+>>>>>>> 4853fdfac61f90bafaa93a2cfa8969f4e7e207c6:03 Codigo/FastPay/src/ec/edu/espe/interfaz/Tent.java
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
