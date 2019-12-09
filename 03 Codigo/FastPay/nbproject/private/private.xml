@@ -3,6 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/Users/HP/Proyecto/03%20Codigo/FastPay/src/login.java</file>
             <file>file:/C:/Users/HP/Proyecto/03%20Codigo/FastPay/src/ec/edu/espe/interfaz/219.png</file>
             <file>file:/C:/Users/HP/Proyecto/03%20Codigo/FastPay/src/ec/edu/espe/interfaz/tienda-virtual.png</file>
@@ -11,6 +12,24 @@
             <file>file:/C:/Users/HP/Proyecto/03%20Codigo/FastPay/src/Register.java</file>
             <file>file:/C:/Users/HP/Proyecto/03%20Codigo/FastPay/test/ProjectTest.java</file>
             <file>file:/C:/Users/HP/Proyecto/03%20Codigo/FastPay/src/panel_control.java</file>
+=======
+<<<<<<< HEAD
+            <file>file:/C:/Users/Lenovo/Desktop/proyecto%20poo/Proyecto/03%20Codigo/FastPay/src/ec/edu/espe/interfaz/FrmRegistro.java</file>
+            <file>file:/C:/Users/Lenovo/Desktop/proyecto%20poo/Proyecto/03%20Codigo/FastPay/src/ec/edu/espe/interfaz/Tent.java</file>
+            <file>file:/C:/Users/Lenovo/Desktop/proyecto%20poo/Proyecto/03%20Codigo/FastPay/test/ProjectTest.java</file>
+=======
+<<<<<<< HEAD
+            <file>file:/C:/Users/HP/Proyecto/03%20Codigo/FastPay/src/Tent.java</file>
+            <file>file:/C:/Users/HP/Proyecto/03%20Codigo/FastPay/src/Register.java</file>
+            <file>file:/C:/Users/HP/Proyecto/03%20Codigo/FastPay/test/ProjectTest.java</file>
+=======
+            <file>file:/C:/Users/Usuario/Desktop/P.O.O_2963/Proyecto/03%20Codigo/FastPay/src/ec/edu/espe/FastPay/controller/Administrator.java</file>
+            <file>file:/C:/Users/Usuario/Desktop/P.O.O_2963/Proyecto/03%20Codigo/FastPay/src/ec/edu/espe/FastPay/controller/Article.java</file>
+            <file>file:/C:/Users/Usuario/Desktop/P.O.O_2963/Proyecto/03%20Codigo/FastPay/test/ProjectTest.java</file>
+            <file>file:/C:/Users/Usuario/Desktop/P.O.O_2963/Proyecto/03%20Codigo/FastPay/src/ec/edu/espe/interfaz/Tent.java</file>
+>>>>>>> 4853fdfac61f90bafaa93a2cfa8969f4e7e207c6
+>>>>>>> 7f31bcff6696ebc7a482a05708b491e879e1bd43
+>>>>>>> e58bd5e821e70201f9c9a42a6b3cb98ba3fb60c4
         </group>
     </open-files>
 </project-private>

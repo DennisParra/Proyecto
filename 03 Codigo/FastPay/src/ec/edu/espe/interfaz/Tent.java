@@ -15,6 +15,9 @@ public class Tent extends javax.swing.JFrame {
      */
     public Tent() {
         initComponents();
+        
+        setLocationRelativeTo(null);
+        
     }
 
     /**
@@ -71,6 +74,7 @@ public class Tent extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
         jLabel17 = new javax.swing.JLabel();
 >>>>>>> 4853fdfac61f90bafaa93a2cfa8969f4e7e207c6:03 Codigo/FastPay/src/ec/edu/espe/interfaz/Tent.java
 
@@ -312,6 +316,7 @@ public class Tent extends javax.swing.JFrame {
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
 <<<<<<< HEAD:03 Codigo/FastPay/src/Tent.java
@@ -328,12 +333,12 @@ public class Tent extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
         jLabel1.setText("¡Hola! Bienvenido a tu tienda virtual.");
         jLabel1.setToolTipText("txtTitle");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 40, -1, 29));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, -1, 29));
 
         jLabel2.setFont(new java.awt.Font("Times New Roman", 2, 18)); // NOI18N
         jLabel2.setText("Inicia sesión para disfrutar de los benedicios de FastPay");
         jLabel2.setToolTipText("txtComment");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 90, -1, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 90, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Times New Roman", 3, 18)); // NOI18N
         jLabel3.setText("Usuario:");
@@ -436,6 +441,7 @@ public class Tent extends javax.swing.JFrame {
         jPasswordField1.setToolTipText("pwdPasswordUser");
         getContentPane().add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 250, 268, 33));
 
+        jButton1.setBackground(new java.awt.Color(255, 102, 0));
         jButton1.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
         jButton1.setText("Aceptar");
         jButton1.setToolTipText("btnAccept");
@@ -449,16 +455,36 @@ public class Tent extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Times New Roman", 2, 16)); // NOI18N
         jLabel5.setText("¿Aún no te has registrado? ¡Clickea este botón y se parte de FastPay!");
         jLabel5.setToolTipText("txtComment");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 350, -1, -1));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 340, -1, -1));
 
+        jButton2.setBackground(new java.awt.Color(255, 102, 0));
         jButton2.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jButton2.setText("Registrarme");
         jButton2.setToolTipText("btnRegister");
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 350, -1, -1));
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 340, -1, -1));
+
+        jButton4.setBackground(new java.awt.Color(255, 102, 0));
+        jButton4.setFont(new java.awt.Font("Times New Roman", 2, 14)); // NOI18N
+        jButton4.setText("Salir");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 30, -1, -1));
 
         jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ec/edu/espe/interfaz/carrito-de-compras2.jpg"))); // NOI18N
+<<<<<<< HEAD
+        getContentPane().add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 610, 390));
+=======
         getContentPane().add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 650, 380));
 >>>>>>> 4853fdfac61f90bafaa93a2cfa8969f4e7e207c6:03 Codigo/FastPay/src/ec/edu/espe/interfaz/Tent.java
+>>>>>>> 7f31bcff6696ebc7a482a05708b491e879e1bd43
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -521,6 +547,18 @@ public class Tent extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 >>>>>>> 4853fdfac61f90bafaa93a2cfa8969f4e7e207c6:03 Codigo/FastPay/src/ec/edu/espe/interfaz/Tent.java
 
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        FrmRegistro registro = new FrmRegistro();
+        registro.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton2ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -560,6 +598,7 @@ public class Tent extends javax.swing.JFrame {
     private javax.swing.JButton btnAccept;
     private javax.swing.JButton btnRegister;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JComboBox<String> jComboBox3;
