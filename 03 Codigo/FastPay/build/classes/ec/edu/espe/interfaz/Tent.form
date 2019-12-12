@@ -710,8 +710,6 @@
         <Property name="toolTipText" type="java.lang.String" value="btnRegister"/>
       </Properties>
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
       </Events>
@@ -735,7 +733,6 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton4ActionPerformed"/>
       </Events>
 =======
->>>>>>> e58bd5e821e70201f9c9a42a6b3cb98ba3fb60c4
 <<<<<<< HEAD:03 Codigo/FastPay/src/Tent.form
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRegisterActionPerformed"/>
