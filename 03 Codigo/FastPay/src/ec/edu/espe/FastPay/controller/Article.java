@@ -1,94 +1,30 @@
 package ec.edu.espe.FastPay.controller;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.Scanner;
-
 public class Article {
-    private int id_article;
-    private String name;
-    private int id_provider;
-    private int stock;
-    public static void insert(){
-        
-    Scanner enter= new Scanner(System.in);
-    
-    File Article = new File ("Article.csv");
-    
-    int id_article, id_provider, stock;
-    String name;
-        
-    if(!Article.exists()){
-        try {
-            Article.createNewFile();
-            System.out.println("Enter article ID: ");
-            id_article = enter.nextInt();
-            System.out.println("Type the name: ");
-            name = enter.next();
-            System.out.println("Enter the provider ID: ");
-            id_provider = enter.nextInt();
-            System.out.println("Enter the Stock: ");
-            stock = enter.nextInt();
-            System.out.println(" ");               
-            PrintWriter show;
-            try (FileWriter escribir = new FileWriter(Article, true)) {
-            show = new PrintWriter(escribir);
-            show.println("ID the Article: " + id_article );
-            show.println("Name: " + name );
-            show.println("ID provider: " + id_provider );
-            show.println("Stock: " + stock);
+    protected int id_article;
+    protected String name;
 
-                show.println("");
-            }
-            show.close();
-        } catch (IOException ex) {
-        }
-               
+    public Article(int id_article, String name) {
+        this.id_article = id_article;
+        this.name = name;
     }
-    else{
-        try {
-            System.out.println("Enter the id the article: ");
-            id_article = enter.nextInt();
-            System.out.println("Type the name: ");
-            name = enter.next();
-            System.out.println("Enter the Id the provider: ");
-            id_provider = enter.nextInt();
-            System.out.println("Enter the Stock: ");
-            stock = enter.nextInt();
-            System.out.println(" "); 
-   
-           
-                
-            PrintWriter show;
-            try (FileWriter escribir = new FileWriter(Article, true)) {
-                show = new PrintWriter(escribir);
-            show.println("ID the Article: " + id_article );
-            show.println("Name: " + name );
-            show.println("ID provider: " + id_provider );
-            show.println("Stock: " + stock);
 
+    public int getId_article() {
+        return id_article;
+    }
 
-               
-                show.println("");
-            }
-            show.close();
-        } catch (IOException ex) {
-        }
+    public void setId_article(int id_article) {
+        this.id_article = id_article;
     }
-    
-    
 
-        
+    public String getName() {
+        return name;
     }
-    public static void modify(){
-        
+
+    public void setName(String name) {
+        this.name = name;
     }
-    public static void consult(){
-        
-    }
-    public static void delete(){
-        
-    }
+
 }
+        
+    
