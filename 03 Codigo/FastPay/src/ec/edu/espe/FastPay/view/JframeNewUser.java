@@ -50,9 +50,9 @@ public class JframeNewUser extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel1.setText("New User");
 
-        jLabel2.setText("Username:");
+        jLabel2.setText("Usuario:");
 
-        jLabel3.setText("Password:");
+        jLabel3.setText("Contraseña:");
 
         txtUserName.setToolTipText("Only Characters");
         txtUserName.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -84,7 +84,7 @@ public class JframeNewUser extends javax.swing.JFrame {
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(txtUserName)
                         .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(111, Short.MAX_VALUE))
+                .addContainerGap(104, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
