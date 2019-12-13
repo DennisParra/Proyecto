@@ -1,7 +1,5 @@
 package ec.edu.espe.FastPay.view;
 
-
-
 import javax.swing.JOptionPane;
 import ec.edu.espe.FastPay.controller.Usercontrol;
 import ec.edu.espe.FastPay.model.user1;
@@ -11,7 +9,6 @@ import ec.edu.espe.FastPay.model.user1;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author user
@@ -23,8 +20,10 @@ public class frmLogin extends javax.swing.JFrame {
      */
     public frmLogin() {
         initComponents();
+        setLocationRelativeTo(null);
+        setResizable(false);
         this.setLocationRelativeTo(null);
-        
+
     }
 
     /**
@@ -135,36 +134,40 @@ public class frmLogin extends javax.swing.JFrame {
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
         // TODO add your handling code here:
-        String userName = txtUserName.getText();
+        /*String userName = txtUserName.getText();
         String password = txtPassword.getText();
         Usercontrol userC = new Usercontrol();
         user1 user = userC.Validate(userName, password);
-        
-        if(user != null){
+
+        if (txtUserName.getText().equals(userName)&&txtPassword.getText().equals(password)){
             JOptionPane.showMessageDialog(this, "Login Correcto");
-            JFrameMenu  menu = new JFrameMenu();
+            JFrameMenu menu = new JFrameMenu();
             menu.setVisible(true);
-            this.setVisible(false);
-            
-           
-        }else {
-            JOptionPane.showMessageDialog(this, "Usuario o Contraseña Incorrecto");
+            dispose();
+
+        } else {
+            /*JOptionPane.showMessageDialog(this, "Usuario o Contraseña Incorrecto");
             txtPassword.setText("");
             txtUserName.setFocusable(true);
-        }
+        }*/
+
+        JFrameMenu o = new JFrameMenu();
+        o.setVisible(true);
+        dispose();
+
     }//GEN-LAST:event_btnLoginActionPerformed
 
     private void txtUserNameKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtUserNameKeyTyped
         // TODO add your handling code here:
         char inputChar = evt.getKeyChar();
-        if(!Character.isAlphabetic(inputChar)){
+        if (!Character.isAlphabetic(inputChar)) {
             evt.consume();
         }
     }//GEN-LAST:event_txtUserNameKeyTyped
 
     private void btnNewUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNewUserActionPerformed
         // TODO add your handling code here:
-       
+
         JframeNewUser newU = new JframeNewUser();
         newU.setVisible(true);
         this.setVisible(false);

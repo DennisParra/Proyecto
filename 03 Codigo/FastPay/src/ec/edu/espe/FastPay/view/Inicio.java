@@ -15,6 +15,8 @@ public final class Inicio extends javax.swing.JFrame {
 
     public Inicio() {
         initComponents();
+        setLocationRelativeTo(null);
+        setResizable(false);
         iniciar();
 
     }
