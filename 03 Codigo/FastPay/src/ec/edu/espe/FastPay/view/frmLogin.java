@@ -132,9 +132,11 @@ public class frmLogin extends javax.swing.JFrame {
         
         if(user != null){
             JOptionPane.showMessageDialog(this, "Login Correcto");
-            JFrameMenu menu = new JFrameMenu();
+            JFrameMenu  menu = new JFrameMenu();
             menu.setVisible(true);
             this.setVisible(false);
+            
+           
         }else {
             JOptionPane.showMessageDialog(this, "Usuario o Contraseña Incorrecto");
             txtPassword.setText("");
