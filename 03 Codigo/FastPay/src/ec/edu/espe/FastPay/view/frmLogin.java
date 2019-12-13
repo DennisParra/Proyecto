@@ -50,9 +50,9 @@ public class frmLogin extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel1.setText("Bienvenido a FastPay!");
 
-        jLabel2.setText("Username:");
+        jLabel2.setText("Usuario:");
 
-        jLabel3.setText("Password:");
+        jLabel3.setText("Contraseña");
 
         txtUserName.setToolTipText("Only Characters");
         txtUserName.addKeyListener(new java.awt.event.KeyAdapter() {
