@@ -52,6 +52,11 @@ public class FrmAdmin extends javax.swing.JFrame {
         btnDeleteUsers.setText("Borrar usuarios");
 
         btnExit.setText("Salir");
+        btnExit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnExitActionPerformed(evt);
+            }
+        });
 
         txtWelcome.setFont(new java.awt.Font("MS PGothic", 1, 48)); // NOI18N
         txtWelcome.setText("Bienvenido!");
@@ -97,6 +102,11 @@ public class FrmAdmin extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_btnExitActionPerformed
 
     /**
      * @param args the command line arguments
