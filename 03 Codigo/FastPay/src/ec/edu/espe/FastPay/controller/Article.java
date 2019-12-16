@@ -7,7 +7,7 @@ import java.io.PrintWriter;
 import java.util.Scanner;
 
 public class Article {
-<<<<<<< HEAD
+
     private static String idArticle;
     private static String name;
     public Article (String idArticle, String name)
@@ -26,7 +26,7 @@ public class Article {
     }
     
 }
-=======
+
     private int id_article;
     private String name;
     private int id_provider;
@@ -112,4 +112,4 @@ public class Article {
         
     }
 }
->>>>>>> b7a303204113e6be467943598c489c7eb83c12b8
+
