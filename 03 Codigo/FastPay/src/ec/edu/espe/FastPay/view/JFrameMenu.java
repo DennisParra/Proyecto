@@ -104,8 +104,8 @@ public class JFrameMenu extends javax.swing.JFrame {
     }//GEN-LAST:event_verUserActionPerformed
 
     private void btnProductsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProductsActionPerformed
-        Ventana ventana = new Ventana();
-        ventana.setVisible(true);
+        FrmProducts product = new FrmProducts();
+        product.setVisible(true);
         dispose();
     }//GEN-LAST:event_btnProductsActionPerformed
 

@@ -51,6 +51,11 @@ public class FrmAdmin extends javax.swing.JFrame {
         });
 
         btnAddProducts.setText("Añadir productos");
+        btnAddProducts.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAddProductsActionPerformed(evt);
+            }
+        });
 
         btnSuppliersList.setText("Ver la lista de proveedores");
 
@@ -118,6 +123,12 @@ public class FrmAdmin extends javax.swing.JFrame {
         frmusu.setVisible(true);
         dispose();
     }//GEN-LAST:event_btnAddUserActionPerformed
+
+    private void btnAddProductsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddProductsActionPerformed
+        Ventana ventana = new Ventana();
+        ventana.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnAddProductsActionPerformed
 
     /**
      * @param args the command line arguments
