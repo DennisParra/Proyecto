@@ -16,6 +16,8 @@ public class FrmAdmin extends javax.swing.JFrame {
      */
     public FrmAdmin() {
         initComponents();
+        setLocationRelativeTo(null);
+        setResizable(false);
     }
 
     /**
@@ -32,7 +34,6 @@ public class FrmAdmin extends javax.swing.JFrame {
         btnAddUser = new javax.swing.JButton();
         btnAddProducts = new javax.swing.JButton();
         btnSuppliersList = new javax.swing.JButton();
-        btnDeleteUsers = new javax.swing.JButton();
         btnExit = new javax.swing.JButton();
         txtWelcome = new javax.swing.JLabel();
 
@@ -59,8 +60,6 @@ public class FrmAdmin extends javax.swing.JFrame {
 
         btnSuppliersList.setText("Ver la lista de proveedores");
 
-        btnDeleteUsers.setText("Borrar usuarios");
-
         btnExit.setText("Salir");
         btnExit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -81,7 +80,6 @@ public class FrmAdmin extends javax.swing.JFrame {
                     .addComponent(txtQuestion, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnSuppliersList)
                     .addComponent(btnAddProducts)
-                    .addComponent(btnDeleteUsers)
                     .addComponent(btnExit)
                     .addComponent(txtGreeting)
                     .addComponent(btnAddUser)
@@ -93,21 +91,19 @@ public class FrmAdmin extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(txtGreeting)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(29, 29, 29)
                 .addComponent(txtWelcome, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
                 .addComponent(txtQuestion)
-                .addGap(18, 18, 18)
+                .addGap(27, 27, 27)
                 .addComponent(btnAddUser)
-                .addGap(18, 18, 18)
-                .addComponent(btnDeleteUsers)
                 .addGap(18, 18, 18)
                 .addComponent(btnAddProducts)
                 .addGap(18, 18, 18)
                 .addComponent(btnSuppliersList)
                 .addGap(18, 18, 18)
                 .addComponent(btnExit)
-                .addGap(50, 50, 50))
+                .addGap(39, 39, 39))
         );
 
         pack();
@@ -119,8 +115,8 @@ public class FrmAdmin extends javax.swing.JFrame {
     }//GEN-LAST:event_btnExitActionPerformed
 
     private void btnAddUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddUserActionPerformed
-        FrmUser frmusu = new FrmUser();
-        frmusu.setVisible(true);
+        FrmUser user = new FrmUser();
+        user.setVisible(true);
         dispose();
     }//GEN-LAST:event_btnAddUserActionPerformed
 
@@ -168,7 +164,6 @@ public class FrmAdmin extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAddProducts;
     private javax.swing.JButton btnAddUser;
-    private javax.swing.JButton btnDeleteUsers;
     private javax.swing.JButton btnExit;
     private javax.swing.JButton btnSuppliersList;
     private javax.swing.JLabel txtGreeting;
