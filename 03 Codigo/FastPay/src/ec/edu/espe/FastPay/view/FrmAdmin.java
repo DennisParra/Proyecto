@@ -44,6 +44,11 @@ public class FrmAdmin extends javax.swing.JFrame {
         txtQuestion.setText("¿Qué deseas hacer?");
 
         btnAddUser.setText("Añadir usuarios");
+        btnAddUser.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAddUserActionPerformed(evt);
+            }
+        });
 
         btnAddProducts.setText("Añadir productos");
 
@@ -108,6 +113,12 @@ public class FrmAdmin extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_btnExitActionPerformed
 
+    private void btnAddUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddUserActionPerformed
+        FrmUser frmusu = new FrmUser();
+        frmusu.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnAddUserActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -136,7 +147,7 @@ public class FrmAdmin extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-      /*txtGreetingawt.EventQueue.invokeLater(new Runnable() {
+ /*txtGreetingawt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new FrmAdmin().setVisible(true);
             }

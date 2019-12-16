@@ -87,6 +87,12 @@ public class FrmUser extends javax.swing.JFrame {
 
         txtIdText.setText("ID");
         getContentPane().add(txtIdText, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, -1, -1));
+
+        txtId.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtIdActionPerformed(evt);
+            }
+        });
         getContentPane().add(txtId, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 120, 70, -1));
 
         txtNameText.setText("Nombre");
@@ -238,6 +244,10 @@ public class FrmUser extends javax.swing.JFrame {
         // TODO add your handling code here:
         System.exit(0);
     }//GEN-LAST:event_btnExitActionPerformed
+
+    private void txtIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIdActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtIdActionPerformed
 
     /**
      * @param args the command line arguments
