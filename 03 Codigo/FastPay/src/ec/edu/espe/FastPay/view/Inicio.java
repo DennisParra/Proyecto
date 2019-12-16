@@ -39,54 +39,54 @@ public final class Inicio extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        progress = new javax.swing.JProgressBar();
+        labLogo = new javax.swing.JLabel();
+        prgssLoadingBar = new javax.swing.JProgressBar();
         jPanel1 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        txtBackSquad = new javax.swing.JLabel();
+        labBack = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(600, 376));
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ec/edu/espe/imagenes/logo.jpg"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 50, 300, 340));
+        labLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ec/edu/espe/imagenes/logo.jpg"))); // NOI18N
+        getContentPane().add(labLogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 50, 300, 340));
 
-        progress.addChangeListener(new javax.swing.event.ChangeListener() {
+        prgssLoadingBar.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                progressStateChanged(evt);
+                prgssLoadingBarStateChanged(evt);
             }
         });
-        getContentPane().add(progress, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 430, 494, 25));
+        getContentPane().add(prgssLoadingBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 430, 494, 25));
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 0));
         jPanel1.setLayout(null);
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("DISEÑADO POR: BACKSQUAD");
-        jPanel1.add(jLabel2);
-        jLabel2.setBounds(180, 0, 320, 20);
+        txtBackSquad.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        txtBackSquad.setForeground(new java.awt.Color(255, 255, 255));
+        txtBackSquad.setText("DISEÑADO POR: BACKSQUAD");
+        jPanel1.add(txtBackSquad);
+        txtBackSquad.setBounds(180, 0, 320, 20);
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 390, 514, 27));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ec/edu/espe/imagenes/tienda.jpg"))); // NOI18N
-        jLabel4.setText("jLabel4");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(-100, -20, 990, 550));
+        labBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ec/edu/espe/imagenes/tienda.jpg"))); // NOI18N
+        labBack.setText("jLabel4");
+        getContentPane().add(labBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(-100, -20, 990, 550));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void progressStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_progressStateChanged
-        if (progress.getValue() == 100) {
+    private void prgssLoadingBarStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_prgssLoadingBarStateChanged
+        if (prgssLoadingBar.getValue() == 100) {
             
             frmLogin vp = new frmLogin();
             vp.setVisible(true);
 
             this.dispose();
         }
-    }//GEN-LAST:event_progressStateChanged
+    }//GEN-LAST:event_prgssLoadingBarStateChanged
 
     /**
      * @param args the command line arguments
@@ -122,18 +122,18 @@ public final class Inicio extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JProgressBar progress;
+    private javax.swing.JLabel labBack;
+    private javax.swing.JLabel labLogo;
+    private javax.swing.JProgressBar prgssLoadingBar;
+    private javax.swing.JLabel txtBackSquad;
     // End of variables declaration//GEN-END:variables
 
     /**
      * @return the progress
      */
     public javax.swing.JProgressBar getProgress() {
-        return progress;
+        return prgssLoadingBar;
     }
 
     

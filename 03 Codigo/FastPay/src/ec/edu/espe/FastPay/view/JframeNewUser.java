@@ -38,19 +38,19 @@ public class JframeNewUser extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        txtNewUser = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         txtUserName = new javax.swing.JTextField();
         txtPassword = new javax.swing.JPasswordField();
         btnCreateUser = new javax.swing.JButton();
-        jButton1Atras = new javax.swing.JButton();
-        salirNewUser = new javax.swing.JButton();
+        btnBack = new javax.swing.JButton();
+        btnExitNewUser = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel1.setText("New User");
+        txtNewUser.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        txtNewUser.setText("Nuevo Usuario");
 
         jLabel2.setText("Usuario:");
 
@@ -70,17 +70,17 @@ public class JframeNewUser extends javax.swing.JFrame {
             }
         });
 
-        jButton1Atras.setText("Atras");
-        jButton1Atras.addActionListener(new java.awt.event.ActionListener() {
+        btnBack.setText("Atras");
+        btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1AtrasActionPerformed(evt);
+                btnBackActionPerformed(evt);
             }
         });
 
-        salirNewUser.setText("Salir ");
-        salirNewUser.addActionListener(new java.awt.event.ActionListener() {
+        btnExitNewUser.setText("Salir ");
+        btnExitNewUser.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                salirNewUserActionPerformed(evt);
+                btnExitNewUserActionPerformed(evt);
             }
         });
 
@@ -97,23 +97,25 @@ public class JframeNewUser extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(txtUserName)
-                                .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtUserName)
+                            .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(38, 38, 38)
-                        .addComponent(jButton1Atras)
+                        .addComponent(btnBack)
                         .addGap(45, 45, 45)
-                        .addComponent(salirNewUser)))
+                        .addComponent(btnExitNewUser)))
                 .addContainerGap(66, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(txtNewUser)
+                .addGap(146, 146, 146))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(53, 53, 53)
-                .addComponent(jLabel1)
+                .addComponent(txtNewUser)
                 .addGap(32, 32, 32)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
@@ -124,9 +126,9 @@ public class JframeNewUser extends javax.swing.JFrame {
                     .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(33, 33, 33)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1Atras)
+                    .addComponent(btnBack)
                     .addComponent(btnCreateUser, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(salirNewUser))
+                    .addComponent(btnExitNewUser))
                 .addContainerGap(28, Short.MAX_VALUE))
         );
 
@@ -155,17 +157,17 @@ public class JframeNewUser extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_txtUserNameKeyTyped
 
-    private void jButton1AtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1AtrasActionPerformed
+    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         // TODO add your handling code here:
         frmLogin login = new frmLogin();
         login.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_jButton1AtrasActionPerformed
+    }//GEN-LAST:event_btnBackActionPerformed
 
-    private void salirNewUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salirNewUserActionPerformed
+    private void btnExitNewUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitNewUserActionPerformed
         // TODO add your handling code here:
         System.exit(0);
-    }//GEN-LAST:event_salirNewUserActionPerformed
+    }//GEN-LAST:event_btnExitNewUserActionPerformed
 
     /**
      * @param args the command line arguments
@@ -204,12 +206,12 @@ public class JframeNewUser extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnBack;
     private javax.swing.JButton btnCreateUser;
-    private javax.swing.JButton jButton1Atras;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton btnExitNewUser;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JButton salirNewUser;
+    private javax.swing.JLabel txtNewUser;
     private javax.swing.JPasswordField txtPassword;
     private javax.swing.JTextField txtUserName;
     // End of variables declaration//GEN-END:variables
