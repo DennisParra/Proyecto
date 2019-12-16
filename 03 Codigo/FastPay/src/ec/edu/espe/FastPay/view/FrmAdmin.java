@@ -16,6 +16,8 @@ public class FrmAdmin extends javax.swing.JFrame {
      */
     public FrmAdmin() {
         initComponents();
+        setLocationRelativeTo(null);
+        setResizable(false);
     }
 
     /**
@@ -32,7 +34,6 @@ public class FrmAdmin extends javax.swing.JFrame {
         btnAddUser = new javax.swing.JButton();
         btnAddProducts = new javax.swing.JButton();
         btnSuppliersList = new javax.swing.JButton();
-        btnDeleteUsers = new javax.swing.JButton();
         btnExit = new javax.swing.JButton();
         txtWelcome = new javax.swing.JLabel();
 
@@ -44,14 +45,27 @@ public class FrmAdmin extends javax.swing.JFrame {
         txtQuestion.setText("¿Qué deseas hacer?");
 
         btnAddUser.setText("Añadir usuarios");
+        btnAddUser.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAddUserActionPerformed(evt);
+            }
+        });
 
         btnAddProducts.setText("Añadir productos");
+        btnAddProducts.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAddProductsActionPerformed(evt);
+            }
+        });
 
         btnSuppliersList.setText("Ver la lista de proveedores");
 
-        btnDeleteUsers.setText("Borrar usuarios");
-
         btnExit.setText("Salir");
+        btnExit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnExitActionPerformed(evt);
+            }
+        });
 
         txtWelcome.setFont(new java.awt.Font("MS PGothic", 1, 48)); // NOI18N
         txtWelcome.setText("Bienvenido!");
@@ -66,7 +80,6 @@ public class FrmAdmin extends javax.swing.JFrame {
                     .addComponent(txtQuestion, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnSuppliersList)
                     .addComponent(btnAddProducts)
-                    .addComponent(btnDeleteUsers)
                     .addComponent(btnExit)
                     .addComponent(txtGreeting)
                     .addComponent(btnAddUser)
@@ -78,25 +91,40 @@ public class FrmAdmin extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(txtGreeting)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(29, 29, 29)
                 .addComponent(txtWelcome, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
                 .addComponent(txtQuestion)
-                .addGap(18, 18, 18)
+                .addGap(27, 27, 27)
                 .addComponent(btnAddUser)
-                .addGap(18, 18, 18)
-                .addComponent(btnDeleteUsers)
                 .addGap(18, 18, 18)
                 .addComponent(btnAddProducts)
                 .addGap(18, 18, 18)
                 .addComponent(btnSuppliersList)
                 .addGap(18, 18, 18)
                 .addComponent(btnExit)
-                .addGap(50, 50, 50))
+                .addGap(39, 39, 39))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_btnExitActionPerformed
+
+    private void btnAddUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddUserActionPerformed
+        FrmUser user = new FrmUser();
+        user.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnAddUserActionPerformed
+
+    private void btnAddProductsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddProductsActionPerformed
+        Ventana ventana = new Ventana();
+        ventana.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnAddProductsActionPerformed
 
     /**
      * @param args the command line arguments
@@ -126,7 +154,7 @@ public class FrmAdmin extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-      /*txtGreetingawt.EventQueue.invokeLater(new Runnable() {
+ /*txtGreetingawt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new FrmAdmin().setVisible(true);
             }
@@ -136,7 +164,6 @@ public class FrmAdmin extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAddProducts;
     private javax.swing.JButton btnAddUser;
-    private javax.swing.JButton btnDeleteUsers;
     private javax.swing.JButton btnExit;
     private javax.swing.JButton btnSuppliersList;
     private javax.swing.JLabel txtGreeting;

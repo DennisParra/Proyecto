@@ -29,7 +29,6 @@
                   <Component id="txtQuestion" alignment="0" min="-2" pref="130" max="-2" attributes="0"/>
                   <Component id="btnSuppliersList" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Component id="btnAddProducts" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="btnDeleteUsers" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Component id="btnExit" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Component id="txtGreeting" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Component id="btnAddUser" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -44,21 +43,19 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Component id="txtGreeting" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
               <Component id="txtWelcome" min="-2" pref="46" max="-2" attributes="0"/>
-              <EmptySpace pref="34" max="32767" attributes="0"/>
+              <EmptySpace pref="30" max="32767" attributes="0"/>
               <Component id="txtQuestion" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
               <Component id="btnAddUser" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="btnDeleteUsers" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="btnAddProducts" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="btnSuppliersList" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="btnExit" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -81,26 +78,30 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="A&#xf1;adir usuarios"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAddUserActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnAddProducts">
       <Properties>
         <Property name="text" type="java.lang.String" value="A&#xf1;adir productos"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAddProductsActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnSuppliersList">
       <Properties>
         <Property name="text" type="java.lang.String" value="Ver la lista de proveedores"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="btnDeleteUsers">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Borrar usuarios"/>
-      </Properties>
-    </Component>
     <Component class="javax.swing.JButton" name="btnExit">
       <Properties>
         <Property name="text" type="java.lang.String" value="Salir"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnExitActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="txtWelcome">
       <Properties>
