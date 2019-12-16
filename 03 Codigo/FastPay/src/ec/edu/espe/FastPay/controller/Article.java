@@ -1,30 +1,21 @@
 package ec.edu.espe.FastPay.controller;
 
 public class Article {
-    protected int id_article;
-    protected String name;
-
-    public Article(int id_article, String name) {
-        this.id_article = id_article;
-        this.name = name;
+    private static String idArticle;
+    private static String name;
+    public Article (String idArticle, String name)
+        {
+            this.idArticle = idArticle;
+            this.name = name;
+        }
+    public Article(){}
+    public String getIdArticle()
+    {
+        return idArticle;
     }
-
-    public int getId_article() {
-        return id_article;
-    }
-
-    public void setId_article(int id_article) {
-        this.id_article = id_article;
-    }
-
-    public String getName() {
+    public String getName()
+    {
         return name;
     }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-}
-        
     
+}

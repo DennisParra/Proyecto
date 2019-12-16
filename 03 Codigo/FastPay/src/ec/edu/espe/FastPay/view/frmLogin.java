@@ -135,7 +135,7 @@ public class frmLogin extends javax.swing.JFrame {
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
         // TODO add your handling code here:
-        String userName = txtUserName.getText();
+        /*String userName = txtUserName.getText();
         String password = txtPassword.getText();
         Usercontrol userC = new Usercontrol();
         user1 user = userC.Validate(userName, password);
@@ -151,7 +151,10 @@ public class frmLogin extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Usuario o Contraseña Incorrecto");
             txtPassword.setText("");
             txtUserName.setFocusable(true);
-        }
+        }*/
+        JFrameMenu o = new JFrameMenu();
+        o.setVisible(true);
+        dispose();
     }//GEN-LAST:event_btnLoginActionPerformed
 
     private void txtUserNameKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtUserNameKeyTyped
