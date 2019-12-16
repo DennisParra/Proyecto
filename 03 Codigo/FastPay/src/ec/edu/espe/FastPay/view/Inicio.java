@@ -1,8 +1,7 @@
 
 package ec.edu.espe.FastPay.view;
 import ec.edu.espe.FastPay.model.Cargar;
-import java.awt.Image;
-import java.awt.Toolkit;
+
 
 
 
@@ -30,13 +29,7 @@ public final class Inicio extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
 
     }
-    
-     public Image getIconImageH(){
-         Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("C:/Users/Lenovo/Desktop/nuwproyec2/Proyecto/03 Codigo/FastPay/src/ec/edu/espe/imagenes"));
-         return retValue;
-     }
 
-    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -53,7 +46,6 @@ public final class Inicio extends javax.swing.JFrame {
         labBack = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setIconImage(getIconImage());
         setMinimumSize(new java.awt.Dimension(600, 376));
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -96,8 +88,6 @@ public final class Inicio extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_prgssLoadingBarStateChanged
 
-  
-    
     /**
      * @param args the command line arguments
      */

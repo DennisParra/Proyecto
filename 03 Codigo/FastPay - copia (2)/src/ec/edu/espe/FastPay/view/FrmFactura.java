@@ -5,24 +5,32 @@
  */
 package ec.edu.espe.FastPay.view;
 
-
+import ec.edu.espe.FastPay.model.Factura;
+import java.util.ArrayList;
+import java.util.List;
 import javax.swing.table.DefaultTableModel;
-
 
 /**
  *
  * @author Matitisxd
  */
 public class FrmFactura extends javax.swing.JFrame {
-    DefaultTableModel model;
+
     /**
      * Creates new form FrmFactura
      */
-    public FrmFactura (){
+    DefaultTableModel modelo;
+    public FrmFactura() {
         initComponents();
-   
-        
+        this.setLocationRelativeTo(null);
+        iniciarTable();
     }
+    void iniciarTable(){
+        String [] titulos = {"Codigo","Nombre","Cantidad","Precio","Subtotal","IVA","Total"};
+        modelo = new DefaultTableModel(null,titulos);
+        tbFactura.setModel(modelo);
+    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -37,14 +45,14 @@ public class FrmFactura extends javax.swing.JFrame {
         lblFecha = new javax.swing.JLabel();
         txtNumeroFactura = new javax.swing.JTextField();
         txtFecha = new javax.swing.JTextField();
-        lblCodigo = new javax.swing.JLabel();
-        lblNombre = new javax.swing.JLabel();
-        lblCantidad = new javax.swing.JLabel();
-        lblPrecio = new javax.swing.JLabel();
-        lblSubtotal = new javax.swing.JLabel();
-        lblIVA = new javax.swing.JLabel();
-        lblTotal = new javax.swing.JLabel();
-        txtidArticle = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        txtCodigo = new javax.swing.JTextField();
         txtNombre = new javax.swing.JTextField();
         txtCantidad = new javax.swing.JTextField();
         txtPrecio = new javax.swing.JTextField();
@@ -64,19 +72,19 @@ public class FrmFactura extends javax.swing.JFrame {
 
         lblFecha.setText("Fecha:");
 
-        lblCodigo.setText("Codigo");
+        jLabel1.setText("Codigo");
 
-        lblNombre.setText("Nombre");
+        jLabel2.setText("Nombre");
 
-        lblCantidad.setText("Cantidad");
+        jLabel3.setText("Cantidad");
 
-        lblPrecio.setText("Precio");
+        jLabel4.setText("Precio");
 
-        lblSubtotal.setText("Subtotal");
+        jLabel5.setText("Subtotal");
 
-        lblIVA.setText("IVA");
+        jLabel6.setText("IVA");
 
-        lblTotal.setText("Total");
+        jLabel7.setText("Total");
 
         jLabel8.setText("0.00");
 
@@ -136,14 +144,14 @@ public class FrmFactura extends javax.swing.JFrame {
                                         .addComponent(txtFecha)))
                                 .addGroup(layout.createSequentialGroup()
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(txtidArticle, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(txtCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGroup(layout.createSequentialGroup()
                                             .addGap(11, 11, 11)
-                                            .addComponent(lblCodigo)))
+                                            .addComponent(jLabel1)))
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addGroup(layout.createSequentialGroup()
                                             .addGap(40, 40, 40)
-                                            .addComponent(lblNombre)
+                                            .addComponent(jLabel2)
                                             .addGap(38, 38, 38))
                                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -151,13 +159,13 @@ public class FrmFactura extends javax.swing.JFrame {
                                             .addGap(18, 18, 18)))
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                         .addGroup(layout.createSequentialGroup()
-                                            .addComponent(lblCantidad)
+                                            .addComponent(jLabel3)
                                             .addGap(61, 61, 61)
-                                            .addComponent(lblPrecio)
+                                            .addComponent(jLabel4)
                                             .addGap(34, 34, 34)
-                                            .addComponent(lblSubtotal)
+                                            .addComponent(jLabel5)
                                             .addGap(18, 18, 18)
-                                            .addComponent(lblIVA)
+                                            .addComponent(jLabel6)
                                             .addGap(0, 1, Short.MAX_VALUE))
                                         .addGroup(layout.createSequentialGroup()
                                             .addComponent(txtCantidad, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -169,7 +177,7 @@ public class FrmFactura extends javax.swing.JFrame {
                                             .addComponent(jLabel9)))
                                     .addGap(18, 18, 18)
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(lblTotal)
+                                        .addComponent(jLabel7)
                                         .addComponent(jLabel10)))
                                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap(75, Short.MAX_VALUE))
@@ -189,16 +197,16 @@ public class FrmFactura extends javax.swing.JFrame {
                     .addComponent(txtFecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(48, 48, 48)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblCodigo)
-                    .addComponent(lblNombre)
-                    .addComponent(lblCantidad)
-                    .addComponent(lblPrecio)
-                    .addComponent(lblSubtotal)
-                    .addComponent(lblIVA)
-                    .addComponent(lblTotal))
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel4)
+                    .addComponent(jLabel5)
+                    .addComponent(jLabel6)
+                    .addComponent(jLabel7))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtidArticle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtCantidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtPrecio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -215,22 +223,28 @@ public class FrmFactura extends javax.swing.JFrame {
         );
 
         pack();
-        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarActionPerformed
-        String Dato[] = new String [7];
-        Dato[0] = txtidArticle.getText();
-        Dato [1] = txtNombre.getText();
-        Dato [2] = txtCantidad.getText();
-        Dato [3] = txtCantidad.getText();
-        Dato [4] = txtPrecio.getText();
-        Dato [5] = lblSubtotal.getText();
-        model.addRow(Dato);
+       String[] datos = new String[6]; //Creamos un arreglo que contendra los datos que se insertaran en la tabla
+        // Guardamos en el arreglo los datos respectivamente
+        datos[0] = txtCodigo.getText();
+        datos[1] = txtNombre.getText();
+        datos[2] = txtPrecio.getText();
+        datos[3] = txtCantidad.getText();
+        datos[4] = String.valueOf(datos.Precio()* datos.Cantidad());;
+        datos[5] = String.valueOf((datos.getPrecio()* datos.getCantidad())*0.12f);String.valueOf((datos.getPrecio()* datos.getCantidad())*0.12f);;
+        modelo.addRow(datos); //Agregamos la columna a nuestro objeto modelo
+        tbFactura.setModel(modelo);
     }//GEN-LAST:event_btnAgregarActionPerformed
 
     private void btnImprimirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnImprimirActionPerformed
-      
+       Factura f;// Instaciamos la clase empleado
+        List <Factura>lista = new ArrayList<>(); //Creamos una lista de empleados con ArrayList para obtener cada empleado
+        for(int i=0; i<tbFactura.getRowCount(); i++){ // Iterena cada fila de la tabla
+            f = new Factura(tbFactura.getValueAt(i, 0).toString(),tbFactura.getValueAt(i,1).toString(), //Tomamos de la tabla el valor de cada columna y creamos un objeto empleado
+            tbFactura.getValueAt(i, 2).toString(),tbFactura.getValueAt(i, 3).toString(),tbFactura.getValueAt(i,4).toString());
+            lista.add(f); //Agregamos el objeto empleado a la lista
     }//GEN-LAST:event_btnImprimirActionPerformed
 
     /**
@@ -271,26 +285,26 @@ public class FrmFactura extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAgregar;
     private javax.swing.JButton btnImprimir;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JLabel lblCantidad;
-    private javax.swing.JLabel lblCodigo;
     private javax.swing.JLabel lblFactura;
     private javax.swing.JLabel lblFecha;
-    private javax.swing.JLabel lblIVA;
     private javax.swing.JLabel lblNFactura;
-    private javax.swing.JLabel lblNombre;
-    private javax.swing.JLabel lblPrecio;
-    private javax.swing.JLabel lblSubtotal;
-    private javax.swing.JLabel lblTotal;
     private javax.swing.JTable tbFactura;
     private javax.swing.JTextField txtCantidad;
+    private javax.swing.JTextField txtCodigo;
     private javax.swing.JTextField txtFecha;
     private javax.swing.JTextField txtNombre;
     private javax.swing.JTextField txtNumeroFactura;
     private javax.swing.JTextField txtPrecio;
-    private javax.swing.JTextField txtidArticle;
     // End of variables declaration//GEN-END:variables
 }

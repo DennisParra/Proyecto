@@ -7,26 +7,6 @@ import java.io.PrintWriter;
 import java.util.Scanner;
 
 public class Article {
-
-    private static String idArticle;
-    private static String name;
-    public Article (String idArticle, String name)
-        {
-            this.idArticle = idArticle;
-            this.name = name;
-        }
-    public Article(){}
-    public String getIdArticle()
-    {
-        return idArticle;
-    }
-    public String getName()
-    {
-        return name;
-    }
-    
-}
-
     private int id_article;
     private String name;
     private int id_provider;
@@ -112,4 +92,3 @@ public class Article {
         
     }
 }
-

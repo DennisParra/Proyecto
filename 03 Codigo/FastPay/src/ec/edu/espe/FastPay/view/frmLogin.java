@@ -122,17 +122,11 @@ public class frmLogin extends javax.swing.JFrame {
             txtPassword.setText("");
             txtUserName.setFocusable(true);
         }*/
-<<<<<<< HEAD
-        JFrameMenu o = new JFrameMenu();
-        o.setVisible(true);
-        dispose();
-=======
 
         JFrameMenu o = new JFrameMenu();
         o.setVisible(true);
         dispose();
 
->>>>>>> b7a303204113e6be467943598c489c7eb83c12b8
     }//GEN-LAST:event_btnLoginActionPerformed
 
     private void txtUserNameKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtUserNameKeyTyped

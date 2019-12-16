@@ -2,26 +2,6 @@ package ec.edu.espe.FastPay.model;
 
 public class Factura {
 
-<<<<<<< HEAD
-
-
-public class Factura extends Article {
-    private static int numeroFactura;
-    private static String fecha;
-    private static int cantidad;
-    private static Double precio;
-
-    public Factura(String idArticle, String name) {
-        super(idArticle, name);
-    }
-
-    public Factura() {
-    }
-
-    
-  
-}
-=======
  private Double iva;
 
   private Double propina;
@@ -101,4 +81,3 @@ public class Factura extends Article {
 
     
 }
->>>>>>> b7a303204113e6be467943598c489c7eb83c12b8
