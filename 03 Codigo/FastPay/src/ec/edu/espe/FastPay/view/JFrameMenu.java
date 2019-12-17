@@ -5,6 +5,8 @@
  */
 package ec.edu.espe.FastPay.view;
 
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author Usuario
@@ -17,6 +19,7 @@ public class JFrameMenu extends javax.swing.JFrame {
     public JFrameMenu() {
 
         initComponents();
+        setIconImage(new ImageIcon(getClass().getResource("/ec/edu/espe/imagenes/logo.png")).getImage());
         setLocationRelativeTo(null);
         setResizable(false);
     }

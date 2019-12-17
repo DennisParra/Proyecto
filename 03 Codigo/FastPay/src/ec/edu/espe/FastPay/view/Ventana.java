@@ -43,38 +43,37 @@ public class Ventana extends javax.swing.JFrame {
     /**
      * Creates new form Visual
      */
-    
     Limpiar_txt lt = new Limpiar_txt();
-    
-    private String ruta_txt = "mi.txt"; 
-    
+
+    private String ruta_txt = "mi.txt";
+
     Producto p;
     Proceso rp;
-    
+
     int clic_tabla;
-            
+
     public Ventana() {
         initComponents();
+        setIconImage(new ImageIcon(getClass().getResource("/ec/edu/espe/imagenes/logo.png")).getImage());
         rp = new Proceso();
-        
-        try{
+
+        try {
             cargar_txt();
             listarRegistro();
-        }catch(Exception ex){
+        } catch (Exception ex) {
             mensaje("No existe el archivo txt");
         }
     }
 
-    public void cargar_txt(){
+    public void cargar_txt() {
         File ruta = new File(ruta_txt);
-        try{
-            
+        try {
+
             FileReader fi = new FileReader(ruta);
             BufferedReader bu = new BufferedReader(fi);
-            
-            
+
             String linea = null;
-            while((linea = bu.readLine())!=null){
+            while ((linea = bu.readLine()) != null) {
                 StringTokenizer st = new StringTokenizer(linea, ",");
                 p = new Producto();
                 p.setCodigo(Integer.parseInt(st.nextToken()));
@@ -84,116 +83,129 @@ public class Ventana extends javax.swing.JFrame {
                 rp.agregarRegistro(p);
             }
             bu.close();
-        }catch(Exception ex){
-            mensaje("Error al cargar archivo: "+ex.getMessage());
+        } catch (Exception ex) {
+            mensaje("Error al cargar archivo: " + ex.getMessage());
             System.out.println(ex.getMessage());
         }
     }
-    
-    public void grabar_txt(){
+
+    public void grabar_txt() {
         FileWriter fw;
         PrintWriter pw;
-        try{
+        try {
             fw = new FileWriter(ruta_txt);
             pw = new PrintWriter(fw);
-            
-            for(int i = 0; i < rp.cantidadRegistro(); i++){
+
+            for (int i = 0; i < rp.cantidadRegistro(); i++) {
                 p = rp.obtenerRegistro(i);
-                pw.println(String.valueOf(p.getCodigo()+", "+p.getNombre()+", "+p.getPrecio()+", "+p.getDescripcion()));
+                pw.println(String.valueOf(p.getCodigo() + ", " + p.getNombre() + ", " + p.getPrecio() + ", " + p.getDescripcion()));
             }
-             pw.close();
-            
-        }catch(Exception ex){
-            mensaje("Error al grabar archivo: "+ex.getMessage());
+            pw.close();
+
+        } catch (Exception ex) {
+            mensaje("Error al grabar archivo: " + ex.getMessage());
             System.out.println(ex.getMessage());
         }
     }
-    
-    public void ingresarRegistro(File ruta){
-        try{
-            if(leerCodigo() == -666)mensaje("Ingresar codigo entero");
-            else if(leerNombre() == null)mensaje("Ingresar Nombre");
-            else if(leerPrecio() == -666) mensaje("Ingresar Precio");
-            else if(leerDescripcion() == null)mensaje("Ingresar Descripcion");
-            else{
+
+    public void ingresarRegistro(File ruta) {
+        try {
+            if (leerCodigo() == -666) {
+                mensaje("Ingresar codigo entero");
+            } else if (leerNombre() == null) {
+                mensaje("Ingresar Nombre");
+            } else if (leerPrecio() == -666) {
+                mensaje("Ingresar Precio");
+            } else if (leerDescripcion() == null) {
+                mensaje("Ingresar Descripcion");
+            } else {
                 p = new Producto(leerCodigo(), leerNombre(), leerPrecio(), leerDescripcion());
-                if(rp.buscaCodigo(p.getCodigo())!= -1)mensaje("Este codigo ya existe");
-                else rp.agregarRegistro(p);
-                
-                grabar_txt();
-                listarRegistro();
-                lt.limpiar_texto(panel); 
-            }
-        }catch(Exception ex){
-            mensaje(ex.getMessage());
-        }
-    }
-    
-    public void modificarRegistro(File ruta){
-        try{
-            if(leerCodigo() == -666)mensaje("Ingresar codigo entero");
-            else if(leerNombre() == null)mensaje("Ingresar Nombre");
-            else if(leerPrecio() == -666) mensaje("Ingresar Precio");
-            else if(leerDescripcion() == null)mensaje("Ingresar Descripcion");
-            else{
-                int codigo = rp.buscaCodigo(leerCodigo());
-                p = new Producto(leerCodigo(), leerNombre(), leerPrecio(), leerDescripcion());
-                
-                if(codigo == -1)rp.agregarRegistro(p);
-                else rp.modificarRegistro(codigo, p);
-                
+                if (rp.buscaCodigo(p.getCodigo()) != -1) {
+                    mensaje("Este codigo ya existe");
+                } else {
+                    rp.agregarRegistro(p);
+                }
+
                 grabar_txt();
                 listarRegistro();
                 lt.limpiar_texto(panel);
             }
-        }catch(Exception ex){
+        } catch (Exception ex) {
             mensaje(ex.getMessage());
         }
     }
-    
-    public void eliminarRegistro(){
-        try{
-            if(leerCodigo() == -666) mensaje("Ingrese codigo entero");
-            
-            else{
+
+    public void modificarRegistro(File ruta) {
+        try {
+            if (leerCodigo() == -666) {
+                mensaje("Ingresar codigo entero");
+            } else if (leerNombre() == null) {
+                mensaje("Ingresar Nombre");
+            } else if (leerPrecio() == -666) {
+                mensaje("Ingresar Precio");
+            } else if (leerDescripcion() == null) {
+                mensaje("Ingresar Descripcion");
+            } else {
                 int codigo = rp.buscaCodigo(leerCodigo());
-                if(codigo == -1) mensaje("codigo no existe");
-                
-                else{
-                    int s = JOptionPane.showConfirmDialog(null, "Esta seguro de eliminar este producto","Si/No",0);
-                    if(s == 0){
+                p = new Producto(leerCodigo(), leerNombre(), leerPrecio(), leerDescripcion());
+
+                if (codigo == -1) {
+                    rp.agregarRegistro(p);
+                } else {
+                    rp.modificarRegistro(codigo, p);
+                }
+
+                grabar_txt();
+                listarRegistro();
+                lt.limpiar_texto(panel);
+            }
+        } catch (Exception ex) {
+            mensaje(ex.getMessage());
+        }
+    }
+
+    public void eliminarRegistro() {
+        try {
+            if (leerCodigo() == -666) {
+                mensaje("Ingrese codigo entero");
+            } else {
+                int codigo = rp.buscaCodigo(leerCodigo());
+                if (codigo == -1) {
+                    mensaje("codigo no existe");
+                } else {
+                    int s = JOptionPane.showConfirmDialog(null, "Esta seguro de eliminar este producto", "Si/No", 0);
+                    if (s == 0) {
                         rp.eliminarRegistro(codigo);
-                        
+
                         grabar_txt();
                         listarRegistro();
                         lt.limpiar_texto(panel);
                     }
                 }
-                
-                
+
             }
-        }catch(Exception ex){
+        } catch (Exception ex) {
             mensaje(ex.getMessage());
         }
     }
-    
-    public void listarRegistro(){
-        DefaultTableModel dt = new DefaultTableModel(){
+
+    public void listarRegistro() {
+        DefaultTableModel dt = new DefaultTableModel() {
             @Override
-            public boolean isCellEditable(int row, int column){
+            public boolean isCellEditable(int row, int column) {
                 return false;
             }
         };
-        
+
         dt.addColumn("Codigo");
         dt.addColumn("Nombre");
         dt.addColumn("Precio");
         dt.addColumn("Descripcion");
-        
+
         tblProducts.setDefaultRenderer(Object.class, new imgTabla());
-        
+
         Object fila[] = new Object[dt.getColumnCount()];
-        for(int i = 0; i < rp.cantidadRegistro(); i++){
+        for (int i = 0; i < rp.cantidadRegistro(); i++) {
             p = rp.obtenerRegistro(i);
             fila[0] = p.getCodigo();
             fila[1] = p.getNombre();
@@ -204,54 +216,54 @@ public class Ventana extends javax.swing.JFrame {
         tblProducts.setModel(dt);
         tblProducts.setRowHeight(60);
     }
-    
-    public int leerCodigo(){
-        try{
+
+    public int leerCodigo() {
+        try {
             int codigo = Integer.parseInt(txtCodigo.getText().trim());
             return codigo;
-        }catch(Exception ex){
+        } catch (Exception ex) {
             return -666;
         }
     }
-    
-    public String leerNombre(){
-        try{
+
+    public String leerNombre() {
+        try {
             String nombre = txtNombre.getText().trim().replace(" ", "_");
             return nombre;
-        }catch(Exception ex){
+        } catch (Exception ex) {
             return null;
         }
     }
-    
-    public double leerPrecio(){
-        try{
+
+    public double leerPrecio() {
+        try {
             double precio = Double.parseDouble(txtPrecio.getText().trim());
             return precio;
-        }catch(Exception ex){
+        } catch (Exception ex) {
             return -666;
         }
     }
-    
-    public Object leerDescripcion(){
-        try{
+
+    public Object leerDescripcion() {
+        try {
             Object descripcion = txtDescripcion.getText().trim();
             return descripcion;
-        }catch(Exception ex){
+        } catch (Exception ex) {
             return null;
         }
     }
-    
-    public byte[] leerFoto(File ruta){
-        try{
+
+    public byte[] leerFoto(File ruta) {
+        try {
             byte[] icono = new byte[(int) ruta.length()];
             InputStream input = new FileInputStream(ruta);
             input.read(icono);
             return icono;
-        }catch(Exception ex){
+        } catch (Exception ex) {
             return null;
         }
     }
-    
+
     /*
     public byte[] leerFoto2(int codigo){
             p = rp.obtenerRegistro(codigo);
@@ -261,12 +273,10 @@ public class Ventana extends javax.swing.JFrame {
                return null;
             }
         }*/
-
-    public void mensaje(String texto){
+    public void mensaje(String texto) {
         JOptionPane.showMessageDialog(null, texto);
     }
-    
-    
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -499,53 +509,53 @@ public class Ventana extends javax.swing.JFrame {
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
         File ruta = new File(txtRuta.getText());
         this.ingresarRegistro(ruta);
-        
-        
+
+
     }//GEN-LAST:event_btnSaveActionPerformed
 
     private void btnModifyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModifyActionPerformed
         File ruta = new File(txtRuta.getText());
         this.modificarRegistro(ruta);
-        
-        
+
+
     }//GEN-LAST:event_btnModifyActionPerformed
 
     private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
         this.eliminarRegistro();
-        
-        
+
+
     }//GEN-LAST:event_btnDeleteActionPerformed
 
     private void txtSearchPicProductActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSearchPicProductActionPerformed
         JFileChooser jf = new JFileChooser();
-        FileNameExtensionFilter fil = new FileNameExtensionFilter("JPG, PNG & GIF","jpg","png","gif");
+        FileNameExtensionFilter fil = new FileNameExtensionFilter("JPG, PNG & GIF", "jpg", "png", "gif");
         jf.setFileFilter(fil);
         jf.setCurrentDirectory(new File("Fotos"));
         int el = jf.showOpenDialog(this);
-        if(el == JFileChooser.APPROVE_OPTION){
+        if (el == JFileChooser.APPROVE_OPTION) {
             txtRuta.setText(jf.getSelectedFile().getAbsolutePath());
             labPic.setIcon(new ImageIcon(txtRuta.getText()));
         }
     }//GEN-LAST:event_txtSearchPicProductActionPerformed
 
     private void tblProductsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblProductsMouseClicked
-        
+
         clic_tabla = tblProducts.rowAtPoint(evt.getPoint());
-        
-        int codigo = (int)tblProducts.getValueAt(clic_tabla, 0);
-        String nombre = ""+tblProducts.getValueAt(clic_tabla, 1);
-        double precio = (double)tblProducts.getValueAt(clic_tabla, 2);
-        Object descripcion = ""+tblProducts.getValueAt(clic_tabla, 3);
+
+        int codigo = (int) tblProducts.getValueAt(clic_tabla, 0);
+        String nombre = "" + tblProducts.getValueAt(clic_tabla, 1);
+        double precio = (double) tblProducts.getValueAt(clic_tabla, 2);
+        Object descripcion = "" + tblProducts.getValueAt(clic_tabla, 3);
 
         txtCodigo.setText(String.valueOf(codigo));
         txtNombre.setText(nombre);
         txtPrecio.setText(String.valueOf(precio));
         txtDescripcion.setText(String.valueOf(descripcion));
-        
-        try{
-            JLabel lbl = (JLabel)tblProducts.getValueAt(clic_tabla, 4);
+
+        try {
+            JLabel lbl = (JLabel) tblProducts.getValueAt(clic_tabla, 4);
             labPic.setIcon(lbl.getIcon());
-        }catch(Exception ex){
+        } catch (Exception ex) {
         }
     }//GEN-LAST:event_tblProductsMouseClicked
 

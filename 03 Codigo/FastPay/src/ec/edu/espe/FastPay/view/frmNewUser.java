@@ -1,10 +1,9 @@
 package ec.edu.espe.FastPay.view;
 
-
-
 import ec.edu.espe.FastPay.Library.FileLibrary;
 import ec.edu.espe.FastPay.Library.PasswordLibrary;
 import ec.edu.espe.FastPay.model.User;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 /*
@@ -12,7 +11,6 @@ import javax.swing.JOptionPane;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author user
@@ -24,6 +22,7 @@ public class frmNewUser extends javax.swing.JFrame {
      */
     public frmNewUser() {
         initComponents();
+        setIconImage(new ImageIcon(getClass().getResource("/ec/edu/espe/imagenes/logo.png")).getImage());
         this.setLocationRelativeTo(null);
     }
 
@@ -109,11 +108,11 @@ public class frmNewUser extends javax.swing.JFrame {
         // TODO add your handling code here:
         String userName = txtUserName.getText();
         String password = PasswordLibrary.encryptPass(txtPassword.getText());
-        
+
         User user = new User(userName, password);
         FileLibrary.addToFile(user);
         JOptionPane.showMessageDialog(this, "Usuario ingresado con exito");
-        
+
         frmLogin login = new frmLogin();
         login.setVisible(true);
         this.setVisible(false);
@@ -122,7 +121,7 @@ public class frmNewUser extends javax.swing.JFrame {
     private void txtUserNameKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtUserNameKeyTyped
         // TODO add your handling code here:
         char inputChar = evt.getKeyChar();
-        if(!Character.isAlphabetic(inputChar)){
+        if (!Character.isAlphabetic(inputChar)) {
             evt.consume();
         }
     }//GEN-LAST:event_txtUserNameKeyTyped
