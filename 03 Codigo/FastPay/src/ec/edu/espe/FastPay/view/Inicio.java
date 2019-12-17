@@ -81,10 +81,10 @@ public final class Inicio extends javax.swing.JFrame {
     private void prgssLoadingBarStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_prgssLoadingBarStateChanged
         if (prgssLoadingBar.getValue() == 100) {
             
-            frmLogin vp = new frmLogin();
-            vp.setVisible(true);
-
-            this.dispose();
+//            frmLogin vp = new frmLogin();
+//            vp.setVisible(true);
+//
+//            this.dispose();
         }
     }//GEN-LAST:event_prgssLoadingBarStateChanged
 
