@@ -5,6 +5,10 @@
  */
 package ec.edu.espe.FastPay.view;
 
+//import ec.edu.espe.FastPay.model.Proveedores;
+import javax.swing.JOptionPane;
+import java.io.*;
+
 /**
  *
  * @author HP
@@ -59,6 +63,11 @@ public class FrmAdmin extends javax.swing.JFrame {
         });
 
         btnSuppliersList.setText("Ver la lista de proveedores");
+        btnSuppliersList.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSuppliersListActionPerformed(evt);
+            }
+        });
 
         btnExit.setText("Salir");
         btnExit.addActionListener(new java.awt.event.ActionListener() {
@@ -117,14 +126,39 @@ public class FrmAdmin extends javax.swing.JFrame {
     private void btnAddUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddUserActionPerformed
         FrmUser user = new FrmUser();
         user.setVisible(true);
-        dispose();
+        this.dispose();
     }//GEN-LAST:event_btnAddUserActionPerformed
 
     private void btnAddProductsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddProductsActionPerformed
         Ventana ventana = new Ventana();
         ventana.setVisible(true);
-        dispose();
+        this.dispose();
     }//GEN-LAST:event_btnAddProductsActionPerformed
+
+    private void btnSuppliersListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSuppliersListActionPerformed
+        // TODO add your handling code here:
+        
+//        Proveedores p = new  Proveedores();
+//        
+//        String prov = p.leerTxt("C:\\Users\\Lenovo\\Desktop\\proyecto Finla\\Proyecto\\Proyecto\\03 Codigo\\FastPay\\Proveedores.txt");
+//        
+//        JOptionPane.showMessageDialog(null, "\n" + prov );
+        
+        try{
+            FileReader bf = new FileReader("C:\\Users\\Lenovo\\Desktop\\proyecto Finla\\Proyecto\\Proyecto\\03 Codigo\\FastPay\\Proveedores.txt");
+            BufferedReader br = new BufferedReader(bf);
+            String cadena;
+           
+            while((cadena = br.readLine()) != null){
+            
+                JOptionPane.showMessageDialog(null,cadena);            }
+            
+        }catch(Exception e){
+            System.err.println("No se encontro el archivo");
+        }
+        
+        
+    }//GEN-LAST:event_btnSuppliersListActionPerformed
 
     /**
      * @param args the command line arguments

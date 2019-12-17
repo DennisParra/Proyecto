@@ -94,6 +94,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Ver la lista de proveedores"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSuppliersListActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnExit">
       <Properties>

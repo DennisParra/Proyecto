@@ -54,13 +54,16 @@ public class FrmUser extends javax.swing.JFrame {
         txtPasswordText = new javax.swing.JLabel();
         txtTypeUser = new javax.swing.JLabel();
         txtPassword = new javax.swing.JPasswordField();
-        cmbPosition = new javax.swing.JComboBox<>();
+        cmbPosition = new javax.swing.JComboBox<String>();
         btnSave = new javax.swing.JButton();
         btNew = new javax.swing.JButton();
         btnEdit = new javax.swing.JButton();
         btnDelete = new javax.swing.JButton();
         btnExit = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        jMenu2 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -83,7 +86,7 @@ public class FrmUser extends javax.swing.JFrame {
         });
         jScrollPane2.setViewportView(TablaUser);
 
-        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 610, 100));
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 610, 50));
 
         txtIdText.setText("ID");
         getContentPane().add(txtIdText, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, -1, -1));
@@ -116,7 +119,7 @@ public class FrmUser extends javax.swing.JFrame {
         });
         getContentPane().add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 280, 100, -1));
 
-        cmbPosition.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Invitado ", "Administrador" }));
+        cmbPosition.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Invitado ", "Administrador" }));
         cmbPosition.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmbPositionActionPerformed(evt);
@@ -165,7 +168,14 @@ public class FrmUser extends javax.swing.JFrame {
         getContentPane().add(btnExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 330, 120, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ec/edu/espe/imagenes/fondo1.jpg"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 610, 430));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -20, 610, 440));
+
+        jMenuBar1.add(jMenu1);
+
+        jMenu2.setText("Cliente");
+        jMenuBar1.add(jMenu2);
+
+        setJMenuBar(jMenuBar1);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -229,6 +239,15 @@ public class FrmUser extends javax.swing.JFrame {
        }
     }//GEN-LAST:event_btnDeleteActionPerformed
 
+    private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_btnExitActionPerformed
+
+    private void txtIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIdActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtIdActionPerformed
+
     private void TablaUserMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TablaUserMouseClicked
         // TODO add your handling code here:
         int fila_seleccionada=TablaUser.getSelectedRow();
@@ -239,15 +258,6 @@ public class FrmUser extends javax.swing.JFrame {
         txtPassword.setText(TablaUser.getValueAt(fila_seleccionada,4).toString());
         filas=fila_seleccionada;
     }//GEN-LAST:event_TablaUserMouseClicked
-
-    private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
-        // TODO add your handling code here:
-        System.exit(0);
-    }//GEN-LAST:event_btnExitActionPerformed
-
-    private void txtIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIdActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtIdActionPerformed
 
     /**
      * @param args the command line arguments
@@ -293,6 +303,9 @@ public class FrmUser extends javax.swing.JFrame {
     private javax.swing.JButton btnSave;
     private javax.swing.JComboBox<String> cmbPosition;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextField txtId;
     private javax.swing.JLabel txtIdText;
