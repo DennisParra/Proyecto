@@ -319,6 +319,7 @@ public class Ventana extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        tblProducts.setToolTipText("Tabla donde se indica la lista de productos ingresados");
         tblProducts.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tblProductsMouseClicked(evt);
@@ -328,6 +329,7 @@ public class Ventana extends javax.swing.JFrame {
 
         btnSave.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
         btnSave.setText("Guardar");
+        btnSave.setToolTipText("Presione aquí para guardar el producto");
         btnSave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSaveActionPerformed(evt);
@@ -336,6 +338,7 @@ public class Ventana extends javax.swing.JFrame {
 
         btnModify.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
         btnModify.setText("Modificar");
+        btnModify.setToolTipText("Presione aquí para modificar el producto");
         btnModify.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnModifyActionPerformed(evt);
@@ -344,6 +347,7 @@ public class Ventana extends javax.swing.JFrame {
 
         btnDelete.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
         btnDelete.setText("Eliminar");
+        btnDelete.setToolTipText("Presione aquí para eliminar el producto");
         btnDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDeleteActionPerformed(evt);
@@ -351,29 +355,39 @@ public class Ventana extends javax.swing.JFrame {
         });
 
         txtDescripcion.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
+        txtDescripcion.setToolTipText("Ingrese aquí una breve descripción del producto");
 
         txtDescriptionProduct.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         txtDescriptionProduct.setText("Descripcion:");
+        txtDescriptionProduct.setToolTipText("Descripción del producto");
 
         txtPriceProduct.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         txtPriceProduct.setText("Precio:");
+        txtPriceProduct.setToolTipText("Precio del producto");
 
         txtPrecio.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
+        txtPrecio.setToolTipText("Ingrese aquí el precio del producto");
 
         txtNombre.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
+        txtNombre.setToolTipText("Ingrese aquí el nombre del producto");
 
         txtCodigo.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
+        txtCodigo.setToolTipText("Ingrese aquí el código del producto");
 
         txtCode.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         txtCode.setText("Codigo:");
+        txtCode.setToolTipText("Código del producto");
 
         txtNameProduct.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         txtNameProduct.setText("Nombre:");
+        txtNameProduct.setToolTipText("Nombre del producto");
 
         txtPicProduct.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         txtPicProduct.setText("Foto:");
+        txtPicProduct.setToolTipText("Foto del producto");
 
         txtSearchPicProduct.setText("Buscar foto...");
+        txtSearchPicProduct.setToolTipText("Busque la foto del producto");
         txtSearchPicProduct.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtSearchPicProductActionPerformed(evt);
@@ -382,12 +396,15 @@ public class Ventana extends javax.swing.JFrame {
 
         txtRuta.setEditable(false);
         txtRuta.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
+        txtRuta.setToolTipText("Nombre del archivo de la imágen");
 
         labPic.setBackground(new java.awt.Color(204, 255, 204));
         labPic.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labPic.setToolTipText("Imágen del producto");
         labPic.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
         btnDeleteAll.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ec/edu/espe/imagenes/escoba1.png"))); // NOI18N
+        btnDeleteAll.setToolTipText("Presione aquí para borrar todo lo ingresado");
         btnDeleteAll.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDeleteAllActionPerformed(evt);
@@ -396,6 +413,7 @@ public class Ventana extends javax.swing.JFrame {
 
         btnBack.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
         btnBack.setText("Atrás");
+        btnBack.setToolTipText("Presione aquí para ir al menú anterior");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);

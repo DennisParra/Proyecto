@@ -5,13 +5,10 @@
  */
 package ec.edu.espe.FastPay.view;
 
-<<<<<<< HEAD
-//import ec.edu.espe.FastPay.model.Proveedores;
+import javax.swing.ImageIcon;
+import ec.edu.espe.FastPay.model.Proveedores;
 import javax.swing.JOptionPane;
 import java.io.*;
-=======
-import javax.swing.ImageIcon;
->>>>>>> c0dc41a62defe9c57f1b2aac4fbf1a12467abf93
 
 /**
  *
@@ -131,38 +128,17 @@ public class FrmAdmin extends javax.swing.JFrame {
     private void btnAddUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddUserActionPerformed
         FrmUser user = new FrmUser();
         user.setVisible(true);
-        this.dispose();
+        dispose();
     }//GEN-LAST:event_btnAddUserActionPerformed
 
     private void btnAddProductsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddProductsActionPerformed
         Ventana ventana = new Ventana();
         ventana.setVisible(true);
-        this.dispose();
+        dispose();
     }//GEN-LAST:event_btnAddProductsActionPerformed
 
     private void btnSuppliersListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSuppliersListActionPerformed
         // TODO add your handling code here:
-        
-//        Proveedores p = new  Proveedores();
-//        
-//        String prov = p.leerTxt("C:\\Users\\Lenovo\\Desktop\\proyecto Finla\\Proyecto\\Proyecto\\03 Codigo\\FastPay\\Proveedores.txt");
-//        
-//        JOptionPane.showMessageDialog(null, "\n" + prov );
-        
-        try{
-            FileReader bf = new FileReader("C:\\Users\\Lenovo\\Desktop\\proyecto Finla\\Proyecto\\Proyecto\\03 Codigo\\FastPay\\Proveedores.txt");
-            BufferedReader br = new BufferedReader(bf);
-            String cadena;
-           
-            while((cadena = br.readLine()) != null){
-            
-                JOptionPane.showMessageDialog(null,cadena);            }
-            
-        }catch(Exception e){
-            System.err.println("No se encontro el archivo");
-        }
-        
-        
     }//GEN-LAST:event_btnSuppliersListActionPerformed
 
     /**
