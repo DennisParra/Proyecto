@@ -46,6 +46,7 @@ public class JFrameMenu extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         verUser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ec/edu/espe/imagenes/user.jpg"))); // NOI18N
+        verUser.setToolTipText("Imagen que inidica que se está en el menú del cliente");
         verUser.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 verUserActionPerformed(evt);
@@ -54,6 +55,7 @@ public class JFrameMenu extends javax.swing.JFrame {
         getContentPane().add(verUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 150, 230, 250));
 
         btnProducts.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ec/edu/espe/imagenes/dining-room.png"))); // NOI18N
+        btnProducts.setToolTipText("Pulse aquí para revisar los productos de la tienda");
         btnProducts.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnProductsActionPerformed(evt);
@@ -62,9 +64,11 @@ public class JFrameMenu extends javax.swing.JFrame {
         getContentPane().add(btnProducts, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 100, 145, 96));
 
         btnBill.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ec/edu/espe/imagenes/dinero.png"))); // NOI18N
+        btnBill.setToolTipText("Pulse aquí para revisar su total a pagar");
         getContentPane().add(btnBill, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 280, 135, 115));
 
         btnExit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ec/edu/espe/imagenes/exit.png"))); // NOI18N
+        btnExit.setToolTipText("Pulse aquí para salir del sistema");
         btnExit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnExitActionPerformed(evt);
@@ -75,16 +79,19 @@ public class JFrameMenu extends javax.swing.JFrame {
         txtUsers.setFont(new java.awt.Font("Tw Cen MT", 1, 48)); // NOI18N
         txtUsers.setForeground(new java.awt.Color(51, 51, 51));
         txtUsers.setText("Usuario");
+        txtUsers.setToolTipText("Título");
         getContentPane().add(txtUsers, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 90, -1, -1));
 
         txtProducts.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         txtProducts.setForeground(new java.awt.Color(240, 240, 240));
         txtProducts.setText("1. Productos");
+        txtProducts.setToolTipText("Índice que indica los productos");
         getContentPane().add(txtProducts, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 130, 170, -1));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(240, 240, 240));
         jLabel3.setText("2. Factura");
+        jLabel3.setToolTipText("Índice que indica la realización de la factura");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 320, -1, -1));
 
         labBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ec/edu/espe/imagenes/FondoTienda.jpg"))); // NOI18N

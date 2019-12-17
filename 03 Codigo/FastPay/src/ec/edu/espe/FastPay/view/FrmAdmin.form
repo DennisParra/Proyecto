@@ -67,16 +67,19 @@
           <Font name="Segoe UI" size="24" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Eres parte de nuestro equipo."/>
+        <Property name="toolTipText" type="java.lang.String" value="Saludo de bienvenida"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="txtQuestion">
       <Properties>
         <Property name="text" type="java.lang.String" value="&#xbf;Qu&#xe9; deseas hacer?"/>
+        <Property name="toolTipText" type="java.lang.String" value="&#xbf;Qu&#xe9; deseas hacer?"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="btnAddUser">
       <Properties>
         <Property name="text" type="java.lang.String" value="A&#xf1;adir usuarios"/>
+        <Property name="toolTipText" type="java.lang.String" value="Presione aqu&#xed; para a&#xf1;adir nuevos usuarios"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAddUserActionPerformed"/>
@@ -85,6 +88,7 @@
     <Component class="javax.swing.JButton" name="btnAddProducts">
       <Properties>
         <Property name="text" type="java.lang.String" value="A&#xf1;adir productos"/>
+        <Property name="toolTipText" type="java.lang.String" value="Presione aqu&#xed; para a&#xf1;adir productos"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAddProductsActionPerformed"/>
@@ -93,6 +97,7 @@
     <Component class="javax.swing.JButton" name="btnSuppliersList">
       <Properties>
         <Property name="text" type="java.lang.String" value="Ver la lista de proveedores"/>
+        <Property name="toolTipText" type="java.lang.String" value="Presione aqu&#xed; para ver la lista de proveedores"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSuppliersListActionPerformed"/>
@@ -101,6 +106,7 @@
     <Component class="javax.swing.JButton" name="btnExit">
       <Properties>
         <Property name="text" type="java.lang.String" value="Salir"/>
+        <Property name="toolTipText" type="java.lang.String" value="Presione aqu&#xed; para salir del sistema"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnExitActionPerformed"/>
@@ -112,6 +118,7 @@
           <Font name="MS PGothic" size="48" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Bienvenido!"/>
+        <Property name="toolTipText" type="java.lang.String" value="Bienvenido!"/>
       </Properties>
     </Component>
   </SubComponents>

@@ -57,8 +57,10 @@ public final class Inicio extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         labLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ec/edu/espe/imagenes/logo.jpg"))); // NOI18N
+        labLogo.setToolTipText("FASTPAY");
         getContentPane().add(labLogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 50, 300, 340));
 
+        prgssLoadingBar.setToolTipText("Barra de carga");
         prgssLoadingBar.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 prgssLoadingBarStateChanged(evt);
@@ -67,11 +69,13 @@ public final class Inicio extends javax.swing.JFrame {
         getContentPane().add(prgssLoadingBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 430, 494, 25));
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel1.setToolTipText("Fondo para el texto del diseñador");
         jPanel1.setLayout(null);
 
         txtBackSquad.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         txtBackSquad.setForeground(new java.awt.Color(255, 255, 255));
         txtBackSquad.setText("DISEÑADO POR: BACKSQUAD");
+        txtBackSquad.setToolTipText("DISEÑADO POR: BACKSQUAD");
         jPanel1.add(txtBackSquad);
         txtBackSquad.setBounds(180, 0, 320, 20);
 

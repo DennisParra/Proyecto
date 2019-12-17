@@ -83,48 +83,61 @@ public class FrmUser extends javax.swing.JFrame {
         });
         jScrollPane2.setViewportView(TablaUser);
 
-        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 610, 100));
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 560, 100));
 
         txtIdText.setText("ID");
+        txtIdText.setToolTipText("ID del usuario");
         getContentPane().add(txtIdText, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, -1, -1));
 
+        txtId.setToolTipText("Ingrese aquí ID para registrar al nuevo usuario");
         txtId.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtIdActionPerformed(evt);
             }
         });
-        getContentPane().add(txtId, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 120, 70, -1));
+        getContentPane().add(txtId, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 120, 90, -1));
 
         txtNameText.setText("Nombre");
+        txtNameText.setToolTipText("Nombre del usuario");
         getContentPane().add(txtNameText, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, -1, -1));
-        getContentPane().add(txtName, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 160, 70, -1));
+
+        txtName.setToolTipText("Ingrese aquí el nombre del usuario");
+        getContentPane().add(txtName, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 160, 150, -1));
 
         txtUserText.setText("Usuario");
+        txtUserText.setToolTipText("Nombre de como se registra al usuario al sistema");
         getContentPane().add(txtUserText, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, -1, -1));
-        getContentPane().add(txtUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 240, 80, -1));
+
+        txtUser.setToolTipText("Ingrese aquí el nombre de como se registra al usuario al sistema");
+        getContentPane().add(txtUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 240, 130, -1));
 
         txtPasswordText.setText("Contraseña");
+        txtPasswordText.setToolTipText("Contraseña que se le asignará al nuevo usuario");
         getContentPane().add(txtPasswordText, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, -1, -1));
 
         txtTypeUser.setText("Tipo de Usuario");
+        txtTypeUser.setToolTipText("Tipo de usuario");
         getContentPane().add(txtTypeUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, -1, -1));
 
+        txtPassword.setToolTipText("Ingrese aquí la contraseña para el nuevo usuario");
         txtPassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtPasswordActionPerformed(evt);
             }
         });
-        getContentPane().add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 280, 100, -1));
+        getContentPane().add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 280, 120, -1));
 
-        cmbPosition.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Invitado ", "Administrador" }));
+        cmbPosition.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cliente", "Administrador" }));
+        cmbPosition.setToolTipText("Elija el tipo de usuario que se va a ingresar");
         cmbPosition.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmbPositionActionPerformed(evt);
             }
         });
-        getContentPane().add(cmbPosition, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 200, -1, -1));
+        getContentPane().add(cmbPosition, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 200, 120, -1));
 
         btnSave.setText("Guardar");
+        btnSave.setToolTipText("Presione aquí para guardar al nuevo usuario");
         btnSave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSaveActionPerformed(evt);
@@ -133,6 +146,7 @@ public class FrmUser extends javax.swing.JFrame {
         getContentPane().add(btnSave, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 130, 120, -1));
 
         btNew.setText("Nuevo");
+        btNew.setToolTipText("Presione aquí para crear un nuevo usuario");
         btNew.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btNewActionPerformed(evt);
@@ -140,15 +154,17 @@ public class FrmUser extends javax.swing.JFrame {
         });
         getContentPane().add(btNew, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 180, 120, -1));
 
-        btnEdit.setText("Editar (Modificar)");
+        btnEdit.setText("Editar");
+        btnEdit.setToolTipText("Presione aquí para editar un usuario");
         btnEdit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEditActionPerformed(evt);
             }
         });
-        getContentPane().add(btnEdit, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 230, -1, -1));
+        getContentPane().add(btnEdit, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 230, 120, -1));
 
         btnDelete.setText("Borrar");
+        btnDelete.setToolTipText("Presione aquí para borrar un usuario");
         btnDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDeleteActionPerformed(evt);
@@ -156,7 +172,8 @@ public class FrmUser extends javax.swing.JFrame {
         });
         getContentPane().add(btnDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 280, 120, -1));
 
-        btnExit.setText("Salir");
+        btnExit.setText("Atrás");
+        btnExit.setToolTipText("Presione aquí para regresar al menú anterior");
         btnExit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnExitActionPerformed(evt);

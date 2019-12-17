@@ -47,10 +47,13 @@ public class FrmAdmin extends javax.swing.JFrame {
 
         txtGreeting.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         txtGreeting.setText("Eres parte de nuestro equipo.");
+        txtGreeting.setToolTipText("Saludo de bienvenida");
 
         txtQuestion.setText("¿Qué deseas hacer?");
+        txtQuestion.setToolTipText("¿Qué deseas hacer?");
 
         btnAddUser.setText("Añadir usuarios");
+        btnAddUser.setToolTipText("Presione aquí para añadir nuevos usuarios");
         btnAddUser.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAddUserActionPerformed(evt);
@@ -58,6 +61,7 @@ public class FrmAdmin extends javax.swing.JFrame {
         });
 
         btnAddProducts.setText("Añadir productos");
+        btnAddProducts.setToolTipText("Presione aquí para añadir productos");
         btnAddProducts.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAddProductsActionPerformed(evt);
@@ -65,6 +69,7 @@ public class FrmAdmin extends javax.swing.JFrame {
         });
 
         btnSuppliersList.setText("Ver la lista de proveedores");
+        btnSuppliersList.setToolTipText("Presione aquí para ver la lista de proveedores");
         btnSuppliersList.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSuppliersListActionPerformed(evt);
@@ -72,6 +77,7 @@ public class FrmAdmin extends javax.swing.JFrame {
         });
 
         btnExit.setText("Salir");
+        btnExit.setToolTipText("Presione aquí para salir del sistema");
         btnExit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnExitActionPerformed(evt);
@@ -80,6 +86,7 @@ public class FrmAdmin extends javax.swing.JFrame {
 
         txtWelcome.setFont(new java.awt.Font("MS PGothic", 1, 48)); // NOI18N
         txtWelcome.setText("Bienvenido!");
+        txtWelcome.setToolTipText("Bienvenido!");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
