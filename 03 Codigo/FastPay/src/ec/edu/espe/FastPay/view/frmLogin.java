@@ -24,6 +24,8 @@ public class frmLogin extends javax.swing.JFrame {
     public frmLogin() {
         initComponents();
         setIconImage(new ImageIcon(getClass().getResource("/ec/edu/espe/imagenes/logo.png")).getImage());
+        setLocationRelativeTo(null);
+        setResizable(false);
         this.setLocationRelativeTo(null);
         this.setTitle("Login Program");
         this.setLocation(400, 220);

@@ -22,6 +22,8 @@ public class frmNewUser extends javax.swing.JFrame {
      */
     public frmNewUser() {
         initComponents();
+        setLocationRelativeTo(null);
+        setResizable(false);
         setIconImage(new ImageIcon(getClass().getResource("/ec/edu/espe/imagenes/logo.png")).getImage());
         this.setLocationRelativeTo(null);
     }
