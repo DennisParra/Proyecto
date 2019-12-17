@@ -1,4 +1,4 @@
-package ec.edu.espe.exam2question11.model;
+package ec.edu.espe.FastPay.model;
 
 /*
  * To change this license header, choose License Headers in Project Properties.

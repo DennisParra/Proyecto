@@ -3,7 +3,7 @@ package ec.edu.espe.FastPay.view;
 
 
 import ec.edu.espe.FastPay.controller.UserController;
-import ec.edu.espe.exam2question11.model.User;
+import ec.edu.espe.FastPay.model.User;
 import javax.swing.JOptionPane;
 
 /*
@@ -135,7 +135,7 @@ public class frmLogin extends javax.swing.JFrame {
         User user = userC.Validate(userName, password);
         
         
-        if ((userName.equals("STALIN")) && (password.equals("STALIN"))) {
+        if ((userName.equals("BackSquad")) && (password.equals("13579admin"))) {
             nombre = "Administrador";
             FrmAdmin administrator = new FrmAdmin();
             administrator.setVisible(true);

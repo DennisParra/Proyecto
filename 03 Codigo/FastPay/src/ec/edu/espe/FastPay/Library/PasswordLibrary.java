@@ -1,4 +1,4 @@
-package ec.edu.espe.exam2question11.libraries;
+package ec.edu.espe.FastPay.Library;
 
 /*
  * To change this license header, choose License Headers in Project Properties.

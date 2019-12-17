@@ -2,9 +2,9 @@ package ec.edu.espe.FastPay.controller;
 
 
 import com.google.gson.Gson;
-import ec.edu.espe.exam2question11.libraries.FileLibrary;
-import ec.edu.espe.exam2question11.libraries.PasswordLibrary;
-import ec.edu.espe.exam2question11.model.User;
+import ec.edu.espe.FastPay.Library.FileLibrary;
+import ec.edu.espe.FastPay.Library.PasswordLibrary;
+import ec.edu.espe.FastPay.model.User;
 import java.util.ArrayList;
 
 /*
