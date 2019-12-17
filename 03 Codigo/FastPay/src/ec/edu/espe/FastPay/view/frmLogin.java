@@ -1,9 +1,8 @@
 package ec.edu.espe.FastPay.view;
 
-
-
 import ec.edu.espe.FastPay.controller.UserController;
 import ec.edu.espe.FastPay.model.User;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 /*
@@ -11,24 +10,26 @@ import javax.swing.JOptionPane;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author user
  */
 public class frmLogin extends javax.swing.JFrame {
+
     static String nombre;
-    
 
     /**
      * Creates new form frmLogin
      */
     public frmLogin() {
         initComponents();
+        setIconImage(new ImageIcon(getClass().getResource("/ec/edu/espe/imagenes/logo.png")).getImage());
+        setLocationRelativeTo(null);
+        setResizable(false);
         this.setLocationRelativeTo(null);
         this.setTitle("Login Program");
         this.setLocation(400, 220);
-        
+
     }
 
     /**
@@ -63,6 +64,8 @@ public class frmLogin extends javax.swing.JFrame {
                 txtUserNameKeyTyped(evt);
             }
         });
+
+        txtPassword.setToolTipText("");
 
         btnLogin.setText("Login");
         btnLogin.addActionListener(new java.awt.event.ActionListener() {
@@ -133,8 +136,7 @@ public class frmLogin extends javax.swing.JFrame {
         String password = txtPassword.getText();
         UserController userC = new UserController();
         User user = userC.Validate(userName, password);
-        
-        
+
         if ((userName.equals("BackSquad")) && (password.equals("13579admin"))) {
             nombre = "Administrador";
             FrmAdmin administrator = new FrmAdmin();
@@ -142,28 +144,34 @@ public class frmLogin extends javax.swing.JFrame {
             administrator.setLocationRelativeTo(null);
             this.dispose();
             JOptionPane.showMessageDialog(this, "Administrator Correct");
-            
-        }else{
+
+        } else {
             JOptionPane.showMessageDialog(this, "Super User Incorrect");
             txtUserName.setFocusable(true);
             txtPassword.setText(" ");
         }
-        if(user != null){
+        if (user != null) {
             JOptionPane.showMessageDialog(this, "Correct Login");
             JFrameMenu menu = new JFrameMenu();
             menu.setVisible(true);
             this.setVisible(false);
-        }else {
-            JOptionPane.showMessageDialog(this, "Incorrcet User & Password");
-            txtPassword.setText("");
-            txtUserName.setFocusable(true);
+        } else {
+            int reply = JOptionPane.showConfirmDialog(null, "Desea volver a intentar?", "Usuario y/o Contraseña Incorrectos", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+            if (reply == JOptionPane.YES_OPTION) {
+                txtUserName.setText("");
+                txtPassword.setText("");
+                txtUserName.setFocusable(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Gracias por usar nuestros servicios.");
+                System.exit(0);
+            }
         }
     }//GEN-LAST:event_btnLoginActionPerformed
 
     private void txtUserNameKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtUserNameKeyTyped
         // TODO add your handling code here:
         char inputChar = evt.getKeyChar();
-        if(!Character.isAlphabetic(inputChar)){
+        if (!Character.isAlphabetic(inputChar)) {
             evt.consume();
         }
     }//GEN-LAST:event_txtUserNameKeyTyped

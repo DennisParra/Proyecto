@@ -5,9 +5,13 @@
  */
 package ec.edu.espe.FastPay.view;
 
+<<<<<<< HEAD
 //import ec.edu.espe.FastPay.model.Proveedores;
 import javax.swing.JOptionPane;
 import java.io.*;
+=======
+import javax.swing.ImageIcon;
+>>>>>>> c0dc41a62defe9c57f1b2aac4fbf1a12467abf93
 
 /**
  *
@@ -20,6 +24,7 @@ public class FrmAdmin extends javax.swing.JFrame {
      */
     public FrmAdmin() {
         initComponents();
+        setIconImage(new ImageIcon(getClass().getResource("/ec/edu/espe/imagenes/logo.png")).getImage());
         setLocationRelativeTo(null);
         setResizable(false);
     }

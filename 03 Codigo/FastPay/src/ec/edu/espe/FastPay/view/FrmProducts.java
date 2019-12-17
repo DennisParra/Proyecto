@@ -5,6 +5,8 @@
  */
 package ec.edu.espe.FastPay.view;
 
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author HP
@@ -16,6 +18,7 @@ public class FrmProducts extends javax.swing.JFrame {
      */
     public FrmProducts() {
         initComponents();
+        setIconImage(new ImageIcon(getClass().getResource("/ec/edu/espe/imagenes/logo.png")).getImage());
         setLocationRelativeTo(null);
         setResizable(false);
     }

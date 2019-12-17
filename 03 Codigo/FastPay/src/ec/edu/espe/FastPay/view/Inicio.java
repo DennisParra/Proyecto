@@ -1,12 +1,9 @@
-
 package ec.edu.espe.FastPay.view;
+
 import ec.edu.espe.FastPay.model.Cargar;
 import java.awt.Image;
 import java.awt.Toolkit;
-
-
-
-
+import javax.swing.ImageIcon;
 
 public final class Inicio extends javax.swing.JFrame {
 
@@ -17,19 +14,17 @@ public final class Inicio extends javax.swing.JFrame {
 
     public Inicio() {
         initComponents();
+        setIconImage(new ImageIcon(getClass().getResource("/ec/edu/espe/imagenes/logo.png")).getImage());
         setLocationRelativeTo(null);
         setResizable(false);
         iniciar();
 
     }
-    
-    
-    
-     public Image getIconImageH(){
-         Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("C:/Users/Lenovo/Desktop/Proyecto-master/03 Codigo/FastPay/src/ec/edu/espe/imagenes/FastPay.png"));
-         return retValue;
-     }
 
+    public Image getIconImageH() {
+        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("C:/Users/Lenovo/Desktop/Proyecto-master/03 Codigo/FastPay/src/ec/edu/espe/imagenes/FastPay.png"));
+        return retValue;
+    }
 
     public void iniciar() {
         setLocationRelativeTo(null);
@@ -40,7 +35,6 @@ public final class Inicio extends javax.swing.JFrame {
 
     }
 
-    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -92,7 +86,7 @@ public final class Inicio extends javax.swing.JFrame {
 
     private void prgssLoadingBarStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_prgssLoadingBarStateChanged
         if (prgssLoadingBar.getValue() == 100) {
-            
+
             frmLogin vp = new frmLogin();
             vp.setVisible(true);
 
@@ -148,6 +142,4 @@ public final class Inicio extends javax.swing.JFrame {
         return prgssLoadingBar;
     }
 
-    
-   
 }
