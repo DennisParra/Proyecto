@@ -64,6 +64,8 @@ public class frmLogin extends javax.swing.JFrame {
             }
         });
 
+        txtPassword.setToolTipText("");
+
         btnLogin.setText("Login");
         btnLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -154,9 +156,16 @@ public class frmLogin extends javax.swing.JFrame {
             menu.setVisible(true);
             this.setVisible(false);
         }else {
-            JOptionPane.showMessageDialog(this, "Incorrcet User & Password");
-            txtPassword.setText("");
-            txtUserName.setFocusable(true);
+            int reply = JOptionPane.showConfirmDialog(null, "Desea volver a intentar?", "Usuario y/o Contraseña Incorrectos", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+            if (reply==JOptionPane.YES_OPTION){
+                txtUserName.setText("");
+                txtPassword.setText("");
+                txtUserName.setFocusable(true);
+            }
+            else{
+                JOptionPane.showMessageDialog(null, "Gracias por usar nuestros servicios.");
+                System.exit(0);
+            }
         }
     }//GEN-LAST:event_btnLoginActionPerformed
 
