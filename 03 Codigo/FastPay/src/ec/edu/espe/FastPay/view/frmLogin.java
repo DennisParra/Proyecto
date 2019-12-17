@@ -141,14 +141,20 @@ public class frmLogin extends javax.swing.JFrame {
             administrator.setVisible(true);
             administrator.setLocationRelativeTo(null);
             this.dispose();
+            JOptionPane.showMessageDialog(this, "Administrator Correct");
+            
+        }else{
+            JOptionPane.showMessageDialog(this, "Super User Incorrect");
+            txtUserName.setFocusable(true);
+            txtPassword.setText(" ");
         }
         if(user != null){
-            JOptionPane.showMessageDialog(this, "Login Correcto");
+            JOptionPane.showMessageDialog(this, "Correct Login");
             JFrameMenu menu = new JFrameMenu();
             menu.setVisible(true);
             this.setVisible(false);
         }else {
-            JOptionPane.showMessageDialog(this, "Usuario o Contraseña Incorrecto");
+            JOptionPane.showMessageDialog(this, "Incorrcet User & Password");
             txtPassword.setText("");
             txtUserName.setFocusable(true);
         }
