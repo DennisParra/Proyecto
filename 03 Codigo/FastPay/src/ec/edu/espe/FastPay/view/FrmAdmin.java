@@ -42,6 +42,9 @@ public class FrmAdmin extends javax.swing.JFrame {
         btnSuppliersList = new javax.swing.JButton();
         btnExit = new javax.swing.JButton();
         txtWelcome = new javax.swing.JLabel();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        jMenu2 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -88,6 +91,12 @@ public class FrmAdmin extends javax.swing.JFrame {
         txtWelcome.setText("Bienvenido!");
         txtWelcome.setToolTipText("Bienvenido!");
 
+        jMenu1.setText("Adinistrador");
+        jMenuBar1.add(jMenu1);
+        jMenuBar1.add(jMenu2);
+
+        setJMenuBar(jMenuBar1);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -111,7 +120,7 @@ public class FrmAdmin extends javax.swing.JFrame {
                 .addComponent(txtGreeting)
                 .addGap(29, 29, 29)
                 .addComponent(txtWelcome, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
                 .addComponent(txtQuestion)
                 .addGap(27, 27, 27)
                 .addComponent(btnAddUser)
@@ -145,7 +154,20 @@ public class FrmAdmin extends javax.swing.JFrame {
     }//GEN-LAST:event_btnAddProductsActionPerformed
 
     private void btnSuppliersListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSuppliersListActionPerformed
-        // TODO add your handling code here:
+       
+         try{
+            FileReader bf = new FileReader("C:\\Users\\Lenovo\\Desktop\\pryec final 2\\Proyecto\\03 Codigo\\FastPay\\Proveedores.txt");
+            BufferedReader br = new BufferedReader(bf);
+            String cadena;
+           
+            while((cadena = br.readLine()) != null){
+            
+                JOptionPane.showMessageDialog(null,cadena);            }
+            
+        }catch(Exception e){
+            System.err.println("No se encontro el archivo");
+        }
+        
     }//GEN-LAST:event_btnSuppliersListActionPerformed
 
     /**
@@ -188,6 +210,9 @@ public class FrmAdmin extends javax.swing.JFrame {
     private javax.swing.JButton btnAddUser;
     private javax.swing.JButton btnExit;
     private javax.swing.JButton btnSuppliersList;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JLabel txtGreeting;
     private javax.swing.JLabel txtQuestion;
     private javax.swing.JLabel txtWelcome;

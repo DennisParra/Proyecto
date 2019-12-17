@@ -54,13 +54,16 @@ public class FrmUser extends javax.swing.JFrame {
         txtPasswordText = new javax.swing.JLabel();
         txtTypeUser = new javax.swing.JLabel();
         txtPassword = new javax.swing.JPasswordField();
-        cmbPosition = new javax.swing.JComboBox<>();
+        cmbPosition = new javax.swing.JComboBox<String>();
         btnSave = new javax.swing.JButton();
         btNew = new javax.swing.JButton();
         btnEdit = new javax.swing.JButton();
         btnDelete = new javax.swing.JButton();
         btnExit = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        jMenu2 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -83,7 +86,7 @@ public class FrmUser extends javax.swing.JFrame {
         });
         jScrollPane2.setViewportView(TablaUser);
 
-        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 560, 100));
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 560, 80));
 
         txtIdText.setText("ID");
         txtIdText.setToolTipText("ID del usuario");
@@ -127,7 +130,7 @@ public class FrmUser extends javax.swing.JFrame {
         });
         getContentPane().add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 280, 120, -1));
 
-        cmbPosition.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cliente", "Administrador" }));
+        cmbPosition.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Cliente", "Administrador" }));
         cmbPosition.setToolTipText("Elija el tipo de usuario que se va a ingresar");
         cmbPosition.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -183,6 +186,13 @@ public class FrmUser extends javax.swing.JFrame {
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ec/edu/espe/imagenes/fondo1.jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 610, 430));
+
+        jMenuBar1.add(jMenu1);
+
+        jMenu2.setText("Cliente");
+        jMenuBar1.add(jMenu2);
+
+        setJMenuBar(jMenuBar1);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -310,6 +320,9 @@ public class FrmUser extends javax.swing.JFrame {
     private javax.swing.JButton btnSave;
     private javax.swing.JComboBox<String> cmbPosition;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextField txtId;
     private javax.swing.JLabel txtIdText;
