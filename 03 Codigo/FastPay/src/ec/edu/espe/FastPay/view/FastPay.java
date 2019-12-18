@@ -1,10 +1,12 @@
-//package ec.edu.espe.FastPay.view;
-//
-//import ec.edu.espe.FastPay.controller.Entry;
-//import java.util.Scanner;
-//
-//public class FastPay {
-//    public static void main(String[] args) {
+package ec.edu.espe.FastPay.view;
+import ec.edu.espe.FastPay.view.registro;
+public class FastPay {
+    public static void main(String[] args) {
+        registro R = new registro();
+        R.setVisible(true);
+    }
+        
+    }
 //        
 //        Menu();
 //        

@@ -171,7 +171,6 @@
                     <Column editable="true" title="Title 4" type="java.lang.Object"/>
                   </Table>
                 </Property>
-                <Property name="toolTipText" type="java.lang.String" value="Tabla donde se indica la lista de productos ingresados"/>
               </Properties>
               <Events>
                 <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="tblProductsMouseClicked"/>
@@ -185,7 +184,6 @@
               <Font name="Arial Black" size="14" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Guardar"/>
-            <Property name="toolTipText" type="java.lang.String" value="Presione aqu&#xed; para guardar el producto"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSaveActionPerformed"/>
@@ -197,7 +195,6 @@
               <Font name="Arial Black" size="14" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Modificar"/>
-            <Property name="toolTipText" type="java.lang.String" value="Presione aqu&#xed; para modificar el producto"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnModifyActionPerformed"/>
@@ -209,7 +206,6 @@
               <Font name="Arial Black" size="14" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Eliminar"/>
-            <Property name="toolTipText" type="java.lang.String" value="Presione aqu&#xed; para eliminar el producto"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnDeleteActionPerformed"/>
@@ -220,7 +216,6 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="SansSerif" size="14" style="0"/>
             </Property>
-            <Property name="toolTipText" type="java.lang.String" value="Ingrese aqu&#xed; una breve descripci&#xf3;n del producto"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="txtDescriptionProduct">
@@ -229,7 +224,6 @@
               <Font name="SansSerif" size="14" style="1"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Descripcion:"/>
-            <Property name="toolTipText" type="java.lang.String" value="Descripci&#xf3;n del producto"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="txtPriceProduct">
@@ -238,7 +232,6 @@
               <Font name="SansSerif" size="14" style="1"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Precio:"/>
-            <Property name="toolTipText" type="java.lang.String" value="Precio del producto"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtPrecio">
@@ -246,7 +239,6 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="SansSerif" size="14" style="0"/>
             </Property>
-            <Property name="toolTipText" type="java.lang.String" value="Ingrese aqu&#xed; el precio del producto"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtNombre">
@@ -254,7 +246,6 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="SansSerif" size="14" style="0"/>
             </Property>
-            <Property name="toolTipText" type="java.lang.String" value="Ingrese aqu&#xed; el nombre del producto"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtCodigo">
@@ -262,7 +253,6 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="SansSerif" size="14" style="0"/>
             </Property>
-            <Property name="toolTipText" type="java.lang.String" value="Ingrese aqu&#xed; el c&#xf3;digo del producto"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="txtCode">
@@ -271,7 +261,6 @@
               <Font name="SansSerif" size="14" style="1"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Codigo:"/>
-            <Property name="toolTipText" type="java.lang.String" value="C&#xf3;digo del producto"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="txtNameProduct">
@@ -280,7 +269,6 @@
               <Font name="SansSerif" size="14" style="1"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Nombre:"/>
-            <Property name="toolTipText" type="java.lang.String" value="Nombre del producto"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="txtPicProduct">
@@ -289,13 +277,11 @@
               <Font name="SansSerif" size="14" style="1"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Foto:"/>
-            <Property name="toolTipText" type="java.lang.String" value="Foto del producto"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="txtSearchPicProduct">
           <Properties>
             <Property name="text" type="java.lang.String" value="Buscar foto..."/>
-            <Property name="toolTipText" type="java.lang.String" value="Busque la foto del producto"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtSearchPicProductActionPerformed"/>
@@ -307,7 +293,6 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Arial" size="10" style="0"/>
             </Property>
-            <Property name="toolTipText" type="java.lang.String" value="Nombre del archivo de la im&#xe1;gen"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="labPic">
@@ -316,7 +301,6 @@
               <Color blue="cc" green="ff" red="cc" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="toolTipText" type="java.lang.String" value="Im&#xe1;gen del producto"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
                 <TitledBorder/>
@@ -329,7 +313,6 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/ec/edu/espe/imagenes/escoba1.png"/>
             </Property>
-            <Property name="toolTipText" type="java.lang.String" value="Presione aqu&#xed; para borrar todo lo ingresado"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnDeleteAllActionPerformed"/>
@@ -341,7 +324,6 @@
               <Font name="Arial Black" size="14" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Atr&#xe1;s"/>
-            <Property name="toolTipText" type="java.lang.String" value="Presione aqu&#xed; para ir al men&#xfa; anterior"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnBackActionPerformed"/>

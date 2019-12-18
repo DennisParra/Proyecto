@@ -1,9 +1,10 @@
 package ec.edu.espe.FastPay.view;
 
+
+
 import ec.edu.espe.FastPay.Library.FileLibrary;
 import ec.edu.espe.FastPay.Library.PasswordLibrary;
 import ec.edu.espe.FastPay.model.User;
-import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 /*
@@ -11,6 +12,7 @@ import javax.swing.JOptionPane;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 /**
  *
  * @author user
@@ -22,9 +24,6 @@ public class frmNewUser extends javax.swing.JFrame {
      */
     public frmNewUser() {
         initComponents();
-        setLocationRelativeTo(null);
-        setResizable(false);
-        setIconImage(new ImageIcon(getClass().getResource("/ec/edu/espe/imagenes/logo.png")).getImage());
         this.setLocationRelativeTo(null);
     }
 
@@ -47,26 +46,20 @@ public class frmNewUser extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel1.setText("Nuevo Usuario");
-        jLabel1.setToolTipText("Nuevo usuario");
+        jLabel1.setText("New User");
 
-        jLabel2.setText("Nuevo usuario:");
-        jLabel2.setToolTipText("Su nombre de usuario");
+        jLabel2.setText("Username:");
 
-        jLabel3.setText("Contraseña:");
-        jLabel3.setToolTipText("Contraseña nueva");
+        jLabel3.setText("Password:");
 
-        txtUserName.setToolTipText("Solo caracteres, no números");
+        txtUserName.setToolTipText("Only Characters");
         txtUserName.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtUserNameKeyTyped(evt);
             }
         });
 
-        txtPassword.setToolTipText("Ingrese aquí su contraseña");
-
-        btnCreateUser.setText("Crear");
-        btnCreateUser.setToolTipText("Pulse aquí para crear su nuevo usuario");
+        btnCreateUser.setText("Create");
         btnCreateUser.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCreateUserActionPerformed(evt);
@@ -78,39 +71,35 @@ public class frmNewUser extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(88, 88, 88)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(39, 39, 39)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel2))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnCreateUser)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(txtUserName, javax.swing.GroupLayout.DEFAULT_SIZE, 146, Short.MAX_VALUE)
-                                .addComponent(txtPassword))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(88, 88, 88)
-                        .addComponent(jLabel1)))
-                .addContainerGap(27, Short.MAX_VALUE))
+                    .addComponent(jLabel1)
+                    .addComponent(btnCreateUser)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(txtUserName)
+                        .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(111, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(29, 29, 29)
+                .addGap(53, 53, 53)
                 .addComponent(jLabel1)
-                .addGap(18, 18, 18)
+                .addGap(32, 32, 32)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(txtUserName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(25, 25, 25)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(34, 34, 34)
+                .addGap(33, 33, 33)
                 .addComponent(btnCreateUser, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(24, Short.MAX_VALUE))
+                .addContainerGap(65, Short.MAX_VALUE))
         );
 
         pack();
@@ -120,11 +109,11 @@ public class frmNewUser extends javax.swing.JFrame {
         // TODO add your handling code here:
         String userName = txtUserName.getText();
         String password = PasswordLibrary.encryptPass(txtPassword.getText());
-
+        
         User user = new User(userName, password);
         FileLibrary.addToFile(user);
         JOptionPane.showMessageDialog(this, "Usuario ingresado con exito");
-
+        
         frmLogin login = new frmLogin();
         login.setVisible(true);
         this.setVisible(false);
@@ -133,7 +122,7 @@ public class frmNewUser extends javax.swing.JFrame {
     private void txtUserNameKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtUserNameKeyTyped
         // TODO add your handling code here:
         char inputChar = evt.getKeyChar();
-        if (!Character.isAlphabetic(inputChar)) {
+        if(!Character.isAlphabetic(inputChar)){
             evt.consume();
         }
     }//GEN-LAST:event_txtUserNameKeyTyped

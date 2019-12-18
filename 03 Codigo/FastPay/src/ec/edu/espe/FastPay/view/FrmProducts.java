@@ -5,8 +5,6 @@
  */
 package ec.edu.espe.FastPay.view;
 
-import javax.swing.ImageIcon;
-
 /**
  *
  * @author HP
@@ -18,7 +16,6 @@ public class FrmProducts extends javax.swing.JFrame {
      */
     public FrmProducts() {
         initComponents();
-        setIconImage(new ImageIcon(getClass().getResource("/ec/edu/espe/imagenes/logo.png")).getImage());
         setLocationRelativeTo(null);
         setResizable(false);
     }
@@ -54,76 +51,61 @@ public class FrmProducts extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         cmbxCanned.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Aceitunas", "Champiñones", "Frijóles", "Sardinas", "Atún", "Granos" }));
-        cmbxCanned.setToolTipText("Seleccione el producto que desea comprar");
         getContentPane().add(cmbxCanned, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 140, 140, 30));
 
         cmbxBar.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Aceite", "Aderezos", "Avena", "Azúcar", "Café", "Cereales", "Gelatinas", "Harina", "Sal", "Mayonesa", "Katsup" }));
-        cmbxBar.setToolTipText("Seleccione el producto que desea comprar");
         getContentPane().add(cmbxBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 80, 140, 30));
 
         cmbxDiary.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Leche condensada", "Leche", "Yogurt", "Mantequilla", "Queso", " " }));
-        cmbxDiary.setToolTipText("Seleccione el producto que desea comprar");
         getContentPane().add(cmbxDiary, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 200, 140, 30));
 
         cmbxFruitsVegetables.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Aguacates", "Cebollas", "Tomate", "Papas (lb)", "Limones", "Manzanas", "Naranjas", "Plátanos" }));
-        cmbxFruitsVegetables.setToolTipText("Seleccione el producto que desea comprar");
         getContentPane().add(cmbxFruitsVegetables, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 80, 150, 30));
 
         txtComment.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         txtComment.setText("Elige el tipo de producto que desees comprar: ");
-        txtComment.setToolTipText("Elige el tipo de producto que desees comprar");
         getContentPane().add(txtComment, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, -1));
 
         labBar.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         labBar.setForeground(new java.awt.Color(153, 255, 255));
         labBar.setText("Abarrotes:");
-        labBar.setToolTipText("Tipo de producto (Abarrotes)");
         getContentPane().add(labBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, -1, -1));
 
         labCanned.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         labCanned.setForeground(new java.awt.Color(102, 255, 255));
         labCanned.setText("Enlatados:");
-        labCanned.setToolTipText("Tipo de producto (Enlatados)");
         getContentPane().add(labCanned, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, -1, -1));
 
         labDiary.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         labDiary.setForeground(new java.awt.Color(102, 255, 255));
         labDiary.setText("Lácteos:");
-        labDiary.setToolTipText("Tipo de producto (Lácteos)");
         getContentPane().add(labDiary, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, -1, -1));
 
         labFruitsVegetables.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         labFruitsVegetables.setForeground(new java.awt.Color(102, 255, 255));
         labFruitsVegetables.setText("Frutas y Verduras:");
-        labFruitsVegetables.setToolTipText("Tipo de producto (Frutas y Verduras)");
         getContentPane().add(labFruitsVegetables, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 80, -1, -1));
 
         labConfectionery.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         labConfectionery.setForeground(new java.awt.Color(102, 255, 255));
         labConfectionery.setText("Confitería:");
-        labConfectionery.setToolTipText("Tipo de producto (Confitería)");
         getContentPane().add(labConfectionery, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 140, -1, -1));
 
         cmbxConfectionery.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Caramelos", "Chocolates", "Chicles", "Chupetes", "Malvaviscos" }));
-        cmbxConfectionery.setToolTipText("Seleccione el producto que desea comprar");
         getContentPane().add(cmbxConfectionery, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 140, 150, 30));
 
         labDrinks.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         labDrinks.setForeground(new java.awt.Color(102, 255, 255));
         labDrinks.setText("Bebidas:");
-        labDrinks.setToolTipText("Tipo de producto (Bebidas)");
         getContentPane().add(labDrinks, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 200, -1, -1));
 
         cmbxDrinks.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Agua", "Jugos/Néctares", "Energizantes", "Refrescos", "Gaseosas", "Cerveza", "Whiskey", "Vodka" }));
-        cmbxDrinks.setToolTipText("Seleccione el producto que desea comprar");
         getContentPane().add(cmbxDrinks, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 200, 150, 30));
 
         btnSave.setText("Guardar");
-        btnSave.setToolTipText("Presione aquí para guardar producto/s elegido/s");
         getContentPane().add(btnSave, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 280, -1, -1));
 
         btnExit.setText("Salir");
-        btnExit.setToolTipText("Presione aquí para salir del sistema");
         btnExit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnExitActionPerformed(evt);
@@ -132,7 +114,6 @@ public class FrmProducts extends javax.swing.JFrame {
         getContentPane().add(btnExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 280, -1, -1));
 
         btnBack.setText("Atrás");
-        btnBack.setToolTipText("Presione aquí para volver al menú anterior");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
