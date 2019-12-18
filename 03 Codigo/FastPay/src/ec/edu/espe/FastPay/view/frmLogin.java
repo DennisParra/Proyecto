@@ -159,7 +159,7 @@ public class frmLogin extends javax.swing.JFrame {
         if ((userName.equals("BackSquad")) && (password.equals("13579admin"))) {
             JOptionPane.showMessageDialog(this, "¡Bienvenido colega!");
             nombre = "Administrador";
-            FrmAdmin administrator = new FrmAdmin();
+            FrmAdministrator administrator = new FrmAdministrator();
             administrator.setVisible(true);
             administrator.setLocationRelativeTo(null);
             this.dispose();

@@ -583,7 +583,7 @@ public class Ventana extends javax.swing.JFrame {
     }//GEN-LAST:event_btnDeleteAllActionPerformed
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
-        FrmAdmin FrmMenu = new FrmAdmin();
+        FrmAdministrator FrmMenu = new FrmAdministrator();
         FrmMenu.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnBackActionPerformed
