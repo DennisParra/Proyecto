@@ -37,6 +37,7 @@
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/ec/edu/espe/imagenes/logo.jpg"/>
         </Property>
+        <Property name="toolTipText" type="java.lang.String" value="FASTPAY"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -45,6 +46,9 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JProgressBar" name="prgssLoadingBar">
+      <Properties>
+        <Property name="toolTipText" type="java.lang.String" value="Barra de carga"/>
+      </Properties>
       <Events>
         <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="prgssLoadingBarStateChanged"/>
       </Events>
@@ -59,6 +63,7 @@
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="0" green="0" red="0" type="rgb"/>
         </Property>
+        <Property name="toolTipText" type="java.lang.String" value="Fondo para el texto del dise&#xf1;ador"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -79,6 +84,7 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="text" type="java.lang.String" value="DISE&#xd1;ADO POR: BACKSQUAD"/>
+            <Property name="toolTipText" type="java.lang.String" value="DISE&#xd1;ADO POR: BACKSQUAD"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">

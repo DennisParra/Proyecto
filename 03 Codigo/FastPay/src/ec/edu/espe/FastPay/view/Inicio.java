@@ -1,12 +1,9 @@
-
 package ec.edu.espe.FastPay.view;
+
 import ec.edu.espe.FastPay.model.Cargar;
 import java.awt.Image;
 import java.awt.Toolkit;
-
-
-
-
+import javax.swing.ImageIcon;
 
 public final class Inicio extends javax.swing.JFrame {
 
@@ -17,19 +14,17 @@ public final class Inicio extends javax.swing.JFrame {
 
     public Inicio() {
         initComponents();
+        setIconImage(new ImageIcon(getClass().getResource("/ec/edu/espe/imagenes/logo.png")).getImage());
         setLocationRelativeTo(null);
         setResizable(false);
         iniciar();
 
     }
-    
-    
-    
-     public Image getIconImageH(){
-         Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("C:/Users/Lenovo/Desktop/Proyecto-master/03 Codigo/FastPay/src/ec/edu/espe/imagenes/FastPay.png"));
-         return retValue;
-     }
 
+    public Image getIconImageH() {
+        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("C:/Users/Lenovo/Desktop/Proyecto-master/03 Codigo/FastPay/src/ec/edu/espe/imagenes/FastPay.png"));
+        return retValue;
+    }
 
     public void iniciar() {
         setLocationRelativeTo(null);
@@ -40,7 +35,6 @@ public final class Inicio extends javax.swing.JFrame {
 
     }
 
-    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -63,8 +57,10 @@ public final class Inicio extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         labLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ec/edu/espe/imagenes/logo.jpg"))); // NOI18N
+        labLogo.setToolTipText("FASTPAY");
         getContentPane().add(labLogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 50, 300, 340));
 
+        prgssLoadingBar.setToolTipText("Barra de carga");
         prgssLoadingBar.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 prgssLoadingBarStateChanged(evt);
@@ -73,11 +69,13 @@ public final class Inicio extends javax.swing.JFrame {
         getContentPane().add(prgssLoadingBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 430, 494, 25));
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel1.setToolTipText("Fondo para el texto del diseñador");
         jPanel1.setLayout(null);
 
         txtBackSquad.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         txtBackSquad.setForeground(new java.awt.Color(255, 255, 255));
         txtBackSquad.setText("DISEÑADO POR: BACKSQUAD");
+        txtBackSquad.setToolTipText("DISEÑADO POR: BACKSQUAD");
         jPanel1.add(txtBackSquad);
         txtBackSquad.setBounds(180, 0, 320, 20);
 
@@ -92,7 +90,7 @@ public final class Inicio extends javax.swing.JFrame {
 
     private void prgssLoadingBarStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_prgssLoadingBarStateChanged
         if (prgssLoadingBar.getValue() == 100) {
-            
+
             frmLogin vp = new frmLogin();
             vp.setVisible(true);
 
@@ -148,6 +146,4 @@ public final class Inicio extends javax.swing.JFrame {
         return prgssLoadingBar;
     }
 
-    
-   
 }
