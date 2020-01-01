@@ -12,6 +12,7 @@ import java.awt.print.Printable;
 import static java.awt.print.Printable.NO_SUCH_PAGE;
 import static java.awt.print.Printable.PAGE_EXISTS;
 import java.awt.print.PrinterException;
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -24,6 +25,9 @@ public class FrmFactura extends javax.swing.JFrame implements Printable  {
      */
     public FrmFactura() {
         initComponents();
+        setIconImage(new ImageIcon(getClass().getResource("/ec/edu/espe/imagenes/logo.png")).getImage());
+        setLocationRelativeTo(null);
+        setResizable(false);
     }
 
     /**

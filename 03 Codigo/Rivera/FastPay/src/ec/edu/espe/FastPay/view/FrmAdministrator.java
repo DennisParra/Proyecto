@@ -5,6 +5,8 @@
  */
 package ec.edu.espe.FastPay.view;
 
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author Usuario
@@ -16,6 +18,9 @@ public class FrmAdministrator extends javax.swing.JFrame {
      */
     public FrmAdministrator() {
         initComponents();
+        setIconImage(new ImageIcon(getClass().getResource("/ec/edu/espe/imagenes/logo.png")).getImage());
+        setLocationRelativeTo(null);
+        setResizable(false);
     }
 
     /**
